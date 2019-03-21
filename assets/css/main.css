@@ -3182,6 +3182,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 .destinations-area .single-destinations .details {
   background: #fff;
   padding: 20px;
+  
+}
+.details-overflow{
+  max-height: 2000px;
+  /* display: block; */
+  /* height: 1500px; */
+	overflow-y: visible;
+	overflow-x: none;
+	/* width: 500px; */
 }
 
 .destinations-area .single-destinations .details h4 {

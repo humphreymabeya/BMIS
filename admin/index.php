@@ -288,7 +288,7 @@
                       <!-- List-->
                       <li class="clearfix">
                         <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-5.jpg" alt="person" class="img-fluid rounded-circle"></a>
+                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
                             <div class="content"><strong>Aria Smith</strong><small>Posted a new blog </small>
                               <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
                             </div>
@@ -299,7 +299,7 @@
                       <!-- List-->
                       <li class="clearfix">
                         <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-2.jpg" alt="person" class="img-fluid rounded-circle"></a>
+                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
                             <div class="content"><strong>Frank Williams</strong><small>Posted a new blog </small>
                               <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
                               <div class="CTAs"><a href="#" class="btn btn-xs btn-dark"><i class="fa fa-thumbs-up"> </i>Like</a><a href="#" class="btn btn-xs btn-dark"><i class="fa fa-heart"> </i>Love</a></div>
@@ -311,7 +311,7 @@
                       <!-- List-->
                       <li class="clearfix">
                         <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-3.jpg" alt="person" class="img-fluid rounded-circle"></a>
+                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
                             <div class="content"><strong>Ashley Wood</strong><small>Posted a new blog </small>
                               <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
                             </div>
@@ -322,7 +322,7 @@
                       <!-- List-->
                       <li class="clearfix">
                         <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-1.jpg" alt="person" class="img-fluid rounded-circle"></a>
+                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
                             <div class="content"><strong>Jason Doe</strong><small>Posted a new blog </small>
                               <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
                             </div>
@@ -335,7 +335,7 @@
                       <!-- List-->
                       <li class="clearfix">
                         <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-6.jpg" alt="person" class="img-fluid rounded-circle"></a>
+                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
                             <div class="content"><strong>Sam Martinez</strong><small>Posted a new blog </small>
                               <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
                             </div>

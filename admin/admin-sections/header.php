@@ -21,4 +21,6 @@
     <link rel="stylesheet" href="../assets/css/custom.css">
     <!-- Datepicker -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+    <!-- custom css -->
+    <!-- <link rel="stylesheet" href="../../assets/css/main.css"> -->
     
