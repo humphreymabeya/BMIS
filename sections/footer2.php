@@ -29,3 +29,4 @@
 	<script src="assets/js/owl.carousel.min.js"></script>							
 	<script src="assets/js/mail-script.js"></script>	
 	<script src="assets/js/main.js"></script>
+    <script src="assets/js/formValidation.js"></script>

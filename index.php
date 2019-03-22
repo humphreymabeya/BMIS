@@ -47,7 +47,7 @@
                                             	<select class="form-control" id="routename" name="routename">
                                                 	<option value="">--Choose Route--</option>
 													<?php
-														$sql = "SELECT * from route where delete_status='0' order by route.routename asc";
+														$sql = "SELECT * from route where delete_status='0' order by route.id asc";
 														$q = $conn->query($sql);
 														while($r = $q->fetch_assoc()){
 															echo '<option value="'.$r['id'].'"  '.(($route==$r['id'])?'selected="selected"':'').'>'.$r['routename'].'</option>';
@@ -116,7 +116,7 @@
 		                </div>
 		            </div>						
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-4 wow fadeInDown">
 							<div class="single-destination relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>
@@ -129,7 +129,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4 wow fadeInUp">
 							<div class="single-destination relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>
@@ -142,7 +142,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4 wow fadeInDown">
 							<div class="single-destination relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>

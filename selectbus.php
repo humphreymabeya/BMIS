@@ -88,7 +88,7 @@
 															<a href="#" class="price-btn">Ksh. '.$result['price'].'</a>
 														</li>
 														<li class="d-flex justify-content-between align-items-center">
-															<a href="selectseat.php" class="btn btn-block btn-primary">Book Now</a>
+															<a href="selectseat.php?id='.$result['id'].'" class="btn btn-block btn-primary">Book Now</a>
 														</li>													
 													</ul>
 												</div>

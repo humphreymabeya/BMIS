@@ -24,3 +24,4 @@
     <script src="../assets/js/charts-home.js"></script>
     <!-- Main File-->
     <script src="../assets/js/front.js"></script>
+    <script src="../assets/js/formValidation.js"></script>

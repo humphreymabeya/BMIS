@@ -16,7 +16,7 @@
             <ul id="side-main-menu" class="side-menu list-unstyled">                  
                 <li><a href="index.php"> <i class="icon-home"></i>Home</a></li>
                 <!-- <li><a href="forms.html"> <i class="icon-form"></i>Forms</a></li> -->
-                <li><a href="bus.php"><i class="fa fa-bus"></i>Bus Management</a></li>
+                <li class><a href="bus.php"><i class="fa fa-bus"></i>Bus Management</a></li>
                 <li><a href="route.php"> <i class="fa fa-road"></i>Route Details</a></li>
                 <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-group"></i>Staff </a>
                 <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
@@ -33,15 +33,19 @@
         <div class="admin-menu">
             <h5 class="sidenav-heading">Secondary menu</h5>
             <ul id="side-admin-menu" class="side-menu list-unstyled"> 
-                <li> <a href="#"> <i class="fa fa-map-marker"> </i>Board Point Details</a></li>
-                    <!-- <li> <a href="#"> <i class="icon-flask"> </i>Demo
-                        <div class="badge badge-info">Special</div></a></li> -->
-                <li> <a href=""> <i class="fa fa-map-marker"> </i>Drop Point Details</a></li>
+                <li><a href="#settings" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-cogs"></i>Settings </a>
+                    <ul id="settings" class="collapse list-unstyled ">
+                        <li><a href="#"><i class="fa fa-lock"></i> Change Password</a></li>
+                        <li><a href="#"><i class="fa fa-file-word-o"></i> Logs</a></li>
+                        <li><a href="#"><i class="fa fa-globe"></i> Change Theme</a></li>
+                    </ul>
+                </li>
+                <li> <a href=""> <i class="fa fa-file-excel-o"> </i>Manifests</a></li>
                 <li> <a href=""> <i class="fa fa-file-image-o"> </i>Gallery</a></li>
-                <li> <a href=""> <i class="fa fa-cogs"> </i>Settings</a></li>
-                <li> <a href=""> <i class="fa fa-times-circle-o"> </i>Cancellation</a></li>
+                <li> <a href=""> <i class="fa fa-times-circle-o"> </i>Cancellations</a></li>
                 <li> <a href=""> <i class="fa fa-list-alt"> </i>Booking Details</a></li>
-                <li> <a href=""> <i class="fa fa-ticket"> </i>Seat Layout</a></li>
+                <li> <a href=""> <i class="fa fa-ticket"> </i>Seat Layouts</a></li>
+
             </ul>
         </div>
     </div>
