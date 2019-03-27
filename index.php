@@ -57,7 +57,7 @@
                                         	</div>
                                     
                                     		<div class="form-group col-12">
-                                        		<input data-date-format="dd-mm-yyyy" class="form-control" placeholder="Travel Date" id="traveldate" name="traveldate" value="<?php echo  ($traveldate!='')?date("Y-m-d", strtotime($traveldate)):'';?>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Travel Date '" readonly/>
+                                        		<input data-date-format="yyyy-mm-dd" class="form-control" placeholder="Travel Date" id="traveldate" name="traveldate" value="<?php echo  ($traveldate!='')?date("Y-m-d", strtotime($traveldate)):'';?>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Travel Date '" readonly/>
                                     		</div>
                                     		<div class="form-group col-12">
                                         		<input type="hidden" name="id" value="<?php echo $id;?>">

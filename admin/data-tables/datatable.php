@@ -165,10 +165,8 @@
 		$row = array(
                     html_entity_decode($aRow['busregno'].'<br/>'.$aRow['bustype']),
                     $aRow['routename'],
-					$aRow['traveldate'],
+					date("d M y", strtotime($aRow['traveldate'])),
                     $aRow['departure'],
-					// date("d M y", strtotime($aRow['joindate'])),
-                    
 					html_entity_decode('<button class="btn btn-primary" onclick="javascript:GetManifest('.$aRow['id'].')"><i class="fa fa-list-alt "></i>  Manifest </button>')
 										
                 );

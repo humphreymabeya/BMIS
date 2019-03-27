@@ -172,18 +172,13 @@
                                     <div class="form-group row">
                                         <label class="col-sm-2 form-control-label">Bus Type</label>
                                         <div class="col-sm-10">
-                                        <input type="text" name="bustype" placeholder="Input 'Business' or 'Executive'" class="form-control" id="bustype" value="<?php echo $bustype; ?>" required/>
-                                        <div class="valid-feedback">
+                                            <input type="text" name="bustype" placeholder="Input 'Business' or 'Executive'" class="form-control" id="bustype" value="<?php echo $bustype; ?>" required/>
+                                            <div class="valid-feedback">
                                                 
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please Add the required Bus type
-                                        </div>
-                                            <!-- <select name="bustype" id="bustype" class="form-control" value="">
-                                                <option value=''>--Select Type--</option>
-                                                <option value='Business'>Business</option>
-                                                <option value='Executive'>Executive</option>	
-                                            </select> -->
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please Add the required Bus type
+                                            </div>
                                         </div>
                                     </div> 
                                     <div class="form-group row">
@@ -232,7 +227,7 @@
                                     <div class="form-group row">
                                         <label class="col-form-label col-sm-2">Date:</label>
                                         <div class="col-sm-10 input-group">
-                                            <input data-date-format="dd-mm-yyyy" class="form-control" id="traveldate" name="traveldate" value="<?php echo  ($traveldate!='')?date("Y-m-d", strtotime($traveldate)):'';?>" readonly />
+                                            <input class="form-control" id="traveldate" name="traveldate" value="<?php echo  ($traveldate!='')?date("Y-m-d", strtotime($traveldate)):'';?>" readonly />
                                             <div class="input-group-append">
                                                 <span class="fa fa-calendar input-group-text traveldate" aria-hidden="true"></span>
                                             </div>
@@ -343,6 +338,7 @@
                 daysOfWeekHighlighted: "6,0",
                 autoclose: true,
                 todayHighlight: true,
+                dateFormat: "yy-mm-dd"
             });
             $('#traveldate').datepicker("setDate", new Date());
         </script>
