@@ -21,7 +21,8 @@
     <script src="../assets/vendor/chart.js/Chart.min.js"></script>
     <script src="../assets/vendor/jquery-validation/jquery.validate.min.js"></script>
     <script src="../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../assets/js/charts-home.js"></script>
+    <!-- <script src="../assets/js/charts-home.js"></script> -->
+    <script src="../assets/js/jquery.dataTables.min.js"></script>
     <!-- Main File-->
     <script src="../assets/js/front.js"></script>
     <script src="../assets/js/formValidation.js"></script>

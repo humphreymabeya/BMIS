@@ -81,8 +81,8 @@
                     <!-- <li><a href="forms.html"> <i class="icon-form"></i>Forms</a></li> -->
                     <li class="active"><a href="bus.php"><i class="fa fa-bus"></i>Bus Management</a></li>
                     <li><a href="route.php"> <i class="fa fa-road"></i>Route Details</a></li>
-                    <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-group"></i>Staff </a>
-                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                    <li><a href="#staff" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-group"></i>Staff </a>
+                    <ul id="staff" class="collapse list-unstyled ">
                         <li><a href="#"><i class="fa fa-user"></i> Drivers</a></li>
                         <li><a href="#"><i class="fa fa-users"></i> Assistants</a></li>
                         <li><a href="#"><i class="fa fa-user"></i> Office Staff</a></li>
@@ -96,6 +96,7 @@
             <div class="admin-menu">
                 <h5 class="sidenav-heading">Secondary menu</h5>
                 <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+                    <li> <a href="manifest.php"> <i class="fa fa-file-excel-o"> </i>Manifests</a></li>
                     <li><a href="#settings" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-cogs"></i>Settings </a>
                         <ul id="settings" class="collapse list-unstyled ">
                             <li><a href="#"><i class="fa fa-lock"></i> Change Password</a></li>
@@ -103,7 +104,6 @@
                             <li><a href="#"><i class="fa fa-globe"></i> Change Theme</a></li>
                         </ul>
                     </li>
-                    <li> <a href=""> <i class="fa fa-file-excel-o"> </i>Manifests</a></li>
                     <li> <a href=""> <i class="fa fa-file-image-o"> </i>Gallery</a></li>
                     <li> <a href=""> <i class="fa fa-times-circle-o"> </i>Cancellations</a></li>
                     <li> <a href=""> <i class="fa fa-list-alt"> </i>Booking Details</a></li>
@@ -329,17 +329,7 @@
                             </table>
                         </div>
                     </div>
-                    <script>
-                        $(document).ready(function () {
-                            $('#tSortable22').dataTable({
-                                "bPaginate": true,
-                                "bLengthChange": true,
-                                "bFilter": true,
-                                "bInfo": false,
-                                "bAutoWidth": true 
-                            });				
-                        });
-                    </script>                    
+                                      
                 </div>
             </div>
             <?php
@@ -355,24 +345,17 @@
                 todayHighlight: true,
             });
             $('#traveldate').datepicker("setDate", new Date());
-            // form validation
-            (function() {
-                'use strict';
-                window.addEventListener('load', function() {
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    var forms = document.getElementsByClassName('needs-validation');
-                    // Loop over them and prevent submission
-                    var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                    });
-                }, false);
-            })();
         </script>
+        <script>
+            $(document).ready(function () {
+                $('#tSortable22').dataTable({
+                    "bPaginate": true,
+                    "bLengthChange": true,
+                    "bFilter": true,
+                    "bInfo": false,
+                    "bAutoWidth": true 
+                });				
+            });
+        </script>  
     </body>
 </html>
