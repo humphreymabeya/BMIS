@@ -12,7 +12,8 @@
     </footer>
 </div>
     <!-- JavaScript files-->
-    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <!-- <script src="../assets/vendor/jquery/jquery.min.js"></script> -->
+    <script src="../assets/vendor/jquery/jquery-1.10.2.js"></script>
     <script src="../assets/js/jquery-ui-1.10.1.custom.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script> -->
     <script src="../assets/vendor/popper.js/umd/popper.min.js"> </script>
