@@ -92,11 +92,11 @@
                                 <form class="form-inline" role="form" id="searchform">
                                     <div class="form-group">
                                         <label for="busreg" class="sr-only">Bus Registration</label>
-                                        <input id="bus" name="busregno" type="text" placeholder="KCQ 111A" class="mr-4 form-control">
+                                        <input id="bus" name="bus" type="text" placeholder="KCQ 111A" class="mr-4 form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="traveldate" class="sr-only">Travel Date</label>
-                                        <input data-date-format="dd-mm-yyyy" id="traveldate" name="traveldate" type="text" placeholder="TravelDate" class="mr-4 form-control">
+                                        <input type="text" placeholder="Travel Date" class="mr-4 form-control" id="traveldate" name="traveldate" >
                                     </div>
                                     <div class="form-group">
                                         <label for="route" class="sr-only">Route</label>
@@ -250,6 +250,22 @@
                     });
                 }
             </script>
+            <!-- modal class -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Take Fee</h4>
+                        </div>
+                        <div class="modal-body" id="formcontent">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>	  
         </div>
     </body>
 </html>

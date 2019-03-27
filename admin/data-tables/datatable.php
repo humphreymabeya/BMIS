@@ -47,7 +47,7 @@
 	$condArr = array();
 	if(isset($_GET['bus']) && $_GET['bus']!="")
 	{
-		$condArr[] = "s.busregno like '%".mysqli_real_escape_string($conn,$_GET['bus'])."%'";
+		$condArr[] = "b.busregno like '%".mysqli_real_escape_string($conn,$_GET['bus'])."%'";
 	
 	}
 	
