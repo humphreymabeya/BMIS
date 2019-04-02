@@ -1,5 +1,6 @@
 <?php
     include('../database/config.php');
+    include('../database/authenticate.php');
     $errormsg = '';
     $action = "add";
     $id = '';
@@ -57,7 +58,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Add Buses | ENA Travels</title>
+        <title> Buses | ENA Travels</title>
         <?php include('admin-sections/header.php'); ?>
     </head>
     <body>

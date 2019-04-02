@@ -45,7 +45,7 @@
 										<div class="form-row">
                                     		<div class="form-group col-12">
                                             	<select class="form-control" id="routename" name="routename">
-                                                	<option value="">--Choose Route--</option>
+                                                	<option value="">--Select Route--</option>
 													<?php
 														$sql = "SELECT * from route where delete_status='0' order by route.id asc";
 														$q = $conn->query($sql);

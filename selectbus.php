@@ -1,10 +1,10 @@
 <?php
-   include('database/config.php');
-   $traveldate = $route = $action = $id = $result = '';
-   $traveldate = mysqli_escape_string($conn, $_POST['traveldate']);
-   $sq = "SELECT * FROM bus where traveldate = '$traveldate'";
-   $b = $conn->query($sq);
-   $res = $b->fetch_assoc();
+	include('database/config.php');
+	$traveldate = $route = $action = $id = $result = '';
+	$traveldate = mysqli_escape_string($conn, $_POST['traveldate']);
+	$sq = "SELECT * FROM bus where traveldate = '$traveldate'";
+	$b = $conn->query($sq);
+	$res = $b->fetch_assoc();
 ?>
 <!DOCTYPE html>
 	<html lang="zxx" class="no-js">
@@ -39,7 +39,7 @@
 		            <div class="row d-flex justify-content-center">
 		                <div class="menu-content pb-40 col-lg-8">
 		                    <div class="title text-center">
-		                        <h1 class="mb-10">Available Fleet for Date: <?php echo $res['traveldate'] ; ?></h1>
+		                        <h1 class="mb-10">Available Fleet for Date: <?php echo $res['traveldate']; ?></h1>
 		                        <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to.</p>
 		                    </div>
 		                </div>

@@ -3,10 +3,12 @@
 	$fullname = $mobile = $idno = $email = $seat = $errormsg = $bid = '';  
 	$bid = isset($_GET['id'])?mysqli_real_escape_string($conn, $_GET['id']):'';
 	$sqlEdit = $conn->query("SELECT * FROM bus WHERE id = '".$bid."'");
+	
 	// fetch price
 	$sqlPrice = "SELECT route.price FROM bus INNER JOIN route ON bus.route=route.id WHERE bus.id = '".$bid."'";
 	$a = $conn->query($sqlPrice);
 	$result = $a->fetch_assoc();
+
 	// fetch booked seats
 	$sqlSeats = $conn->query("SELECT GROUP_CONCAT(CONCAT('''', seat_xy, '''')) AS seatxy FROM reserves WHERE bid = '".$bid."'");
 	$results = $sqlSeats->fetch_array(MYSQLI_ASSOC);
@@ -66,7 +68,7 @@
 		            <div class="row d-flex justify-content-center">
 		                <div class="menu-content pb-5 col-lg-8">
 		                    <div class="title text-center">
-								<h1 class="mb-10">Select your Seat(s)</h1> <?php //echo $res; ?>
+								<h1 class="mb-10">Select your Seat(s)</h1> <?php //echo $result['price']; ?>
 		                    </div>
 		                </div>
 		            </div>						

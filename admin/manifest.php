@@ -1,5 +1,6 @@
 <?php
     include('../database/config.php');
+    include('../database/authenticate.php');
     $route = '';
 ?>
 <!DOCTYPE html>
@@ -174,26 +175,26 @@
                     });
 
                     // /*****************/
-                    // $('#bus').autocomplete({
-                    //     source: function( request, response ) {
-                    //         $.ajax({
-                    //             url : 'data-tables/ajax.php',
-                    //             dataType: "json",
-                    //             data: {
-                    //                 name_startsWith: request.term,
-                    //                 type: 'busname'
-                    //             },
-                    //             success: function( data ) {                               
-                    //                 response( $.map( data, function( item ) {                                   
-                    //                     return {
-                    //                         label: item,
-                    //                         value: item
-                    //                     }
-                    //                 }));
-                    //             }                      
-                    //         });
-                    //     }
-		            // });
+                    $('#bus').autocomplete({
+                        source: function( request, response ) {
+                            $.ajax({
+                                url : 'data-tables/ajax.php',
+                                dataType: "json",
+                                data: {
+                                    name_startsWith: request.term,
+                                    type: 'busname'
+                                },
+                                success: function( data ) {                               
+                                    response( $.map( data, function( item ) {                                   
+                                        return {
+                                            label: item,
+                                            value: item
+                                        }
+                                    }));
+                                }                      
+                            });
+                        }
+		            });
                     $('#find').click(function () {
                         mydatatable();
                     });
@@ -241,7 +242,7 @@
                 {
                     $.ajax({
                         type: 'post',
-                        url: 'getmanifest.php',
+                        url: 'getManifest.php',
                         data: {bus:bid,req:'1'},
                         success: function (data) {
                             $('#formcontent').html(data);
@@ -252,16 +253,17 @@
             </script>
             <!-- modal class -->
             <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <h4 class="modal-title">Passenger List</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Take Fee</h4>
                         </div>
                         <div class="modal-body" id="formcontent">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <span class="float-left"><button type="button" class="btn btn-info float-left"><i class="fa fa-print"></i> Print</button></span>
+                            <span class="float-right"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></span>
                         </div>
                     </div>
                 </div>

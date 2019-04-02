@@ -1,5 +1,6 @@
 <?php
     include('../database/config.php');
+    include('../database/authenticate.php');
     $errormsg = '';
     $action = "add";
     $origin = $destination = $price = $routename = '';
@@ -51,7 +52,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Add Routes | ENA Travels</title>
+        <title> Routes | ENA Travels</title>
         <?php include('admin-sections/header.php'); ?>
     </head>
     <body>

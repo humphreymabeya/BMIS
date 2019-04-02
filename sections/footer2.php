@@ -18,7 +18,6 @@
     <script src="assets/vendor/jquery/wow.min.js"></script>
     <!-- <script src="assets/vendor/jquery/retina-1.1.0.min.js"></script> -->
     <script src="assets/vendor/jquery/scripts.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
  	<!-- <script src="assets/js/jquery-ui.js"></script>					 -->
   	<script src="assets/js/easing.min.js"></script>			
 	<script src="assets/js/hoverIntent.js"></script>
