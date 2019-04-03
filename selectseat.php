@@ -28,14 +28,18 @@
 			echo '<script type="text/javascript">window.location="selectseat.php?act=add";</script>';
 		}
 	}
+	// fetch seatid
+	$sqlseatId = "select seatnum from reserves where bid = '".$bid."'";
+	$b = $conn->query($sqlseatId);
+	$c = $b-> fetch_assoc();
 	
 	if(isset($_REQUEST['act']) && @$_REQUEST['act']=="add")
 	{
-		$errormsg = "<div class='alert alert-success'> <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Success!</strong> Seat(s) selected successfully. Click <a href='#'>Here</a> To print Your Ticket.</div>";
+		$errormsg = "<div class='alert alert-success'> <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Success!</strong> Seat(s) selected successfully. Click <a href='getTicket.php?seatID=".$c['seatnum']."'>Here</a> To print Your Ticket.</div>";
 	}	
 ?>
 <!DOCTYPE html>
-	<html lang="zxx" class="no-js">
+	<html lang="en" class="no-js">
 		<head>
 			<!-- Favicon-->
 			<link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -96,7 +100,7 @@
 									<?php echo $errormsg; ?>
 									<div class="booking-details">
 										<form action="selectseat.php" class="needs-validation" role="form" method="POST" novalidate>
-											<input type="hidden" name="bid" value="<?php echo $bid;?>">\
+											<input type="hidden" name="bid" value="<?php echo $bid;?>">
 											<h3> Selected Seats (<span id="counter">0</span>):</h3>
 											<ul id="selected-seats">
 											</ul>
