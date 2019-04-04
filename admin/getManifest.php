@@ -3,7 +3,7 @@
     include('../database/authenticate.php');
     if(isset($_POST['req']) && $_POST['req'] == 1){
         $bid = (isset($_POST['bus']))?mysqli_real_escape_string($conn,$_POST['bus']):'';
-        $sql = "SELECT seatnum, fullname, mobile from reserves where bid = '".$bid."' order by reserves.seatnum ASC";
+        $sql = "SELECT seatnum, fullname, mobile, ticketID from reserves where bid = '".$bid."' order by reserves.seatnum ASC";
         $result = $conn->query($sql);
         if($result->num_rows > 0){
             $sql = "select b.id,b.busregno,b.departure,b.arrival,r.routename,r.price, b.traveldate from bus as b,route as r where r.id=b.route  and b.id='".$bid."'";
@@ -52,7 +52,7 @@
                             <td>'.$pass['seatnum'].'</td>
                             <td>'.$pass['fullname'].'</td>
                             <td>'.$pass['mobile'].'</td>
-			    <td>Under Dev</td>
+			                <td>'.$pass['ticketID'].'</td>
                             </tr>' ;
                         }
         

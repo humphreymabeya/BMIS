@@ -14,6 +14,22 @@
 	$results = $sqlSeats->fetch_array(MYSQLI_ASSOC);
 	$res = $results['seatxy'];
 
+	// function to create random ticketID
+	function createTicketID(){
+		$chars = 'ABCDEFGHIJKLMNOPQRSTUVWZYZ0123456789';
+		srand((double)microtime()*1000000);
+		$i = 0;
+		$pass = '' ;
+		while ($i <= 7) {
+			$num = rand() % 33;
+			$tmp = substr($chars, $num, 1);
+			$pass = $pass . $tmp;
+			$i++;
+		}
+		return $pass;
+	}
+	$ticketId = createTicketID();
+
 	if(isset($_POST['save'])){	
 		$bid = mysqli_real_escape_string($conn, $_POST['bid']);
 		foreach($_POST['fullname'] as $index => $val){
@@ -23,7 +39,8 @@
 			$email = $_POST['email'][$index];
 			$seat = $_POST['me'][$index];
 			$seat_xy = $_POST['seat_xy'][$index];
-			// $sql = $conn->query("INSERT into reserve (busid,fullname, mobile, idno, email, seatnum) VALUES ('$bid','$fullname', '$mobile', '$idno','$email', '$seat')");
+			// $ticket = $_POST['ticket'][$index];
+			
 			$sql = $conn->query("INSERT into reserves (bid, fullname, mobile, idno, email, seatnum, seat_xy) VALUES ('$bid','$fullname', '$mobile', '$idno','$email', '$seat', '$seat_xy')");
 			echo '<script type="text/javascript">window.location="selectseat.php?act=add";</script>';
 		}
