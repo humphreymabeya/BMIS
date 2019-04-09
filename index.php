@@ -68,7 +68,7 @@
 									</form>
 								</div>
 								<div class="tab-pane fade" id="print" role="tabpanel" aria-labelledby="print-tab">
-									<form class="form-wrap">
+									<form class="form-wrap" action="printTicket.php" method="POST">
 										<div class="form-row">
 											<div class="form-group col-12">
 												<input type="text" class="form-control" name="ticketId" placeholder="Ticket ID " onfocus="this.placeholder = ''" onblur="this.placeholder = 'TicketID '">									
@@ -77,7 +77,7 @@
 												<input type="text" class="form-control" name="mobileNo" placeholder="Mobile Number " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'">
 											</div>	
 											<div class="form-group col-12">
-												<button type="submit" name="save" class="btn btn-block btn-primary text-uppercase">Print Ticket</button>	
+												<button type="submit" name="print" class="btn btn-block btn-primary text-uppercase">Print Ticket</button>	
 											</div>
 										</div>								
 									</form>							  	

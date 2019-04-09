@@ -7,7 +7,7 @@
 	$res = $b->fetch_assoc();
 ?>
 <!DOCTYPE html>
-	<html lang="zxx" class="no-js">
+	<html lang="en" class="no-js">
 		<head>
 			<!-- Favicon-->
 			<link rel="shortcut icon" href="assets/img/favicon.ico">

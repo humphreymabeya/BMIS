@@ -1,4 +1,5 @@
 <?php
+	$action = $id = '';
 	include('database/config.php');
 	$fullname = $mobile = $idno = $email = $seat = $errormsg = $bid = '';  
 	$bid = isset($_GET['id'])?mysqli_real_escape_string($conn, $_GET['id']):'';
@@ -28,32 +29,7 @@
 		}
 		return $pass;
 	}
-	$ticketId = createTicketID();
-
-	if(isset($_POST['save'])){	
-		$bid = mysqli_real_escape_string($conn, $_POST['bid']);
-		foreach($_POST['fullname'] as $index => $val){
-			$fullname = $val;
-			$mobile = $_POST['mobile'][$index];
-			$idno = $_POST['idno'][$index];
-			$email = $_POST['email'][$index];
-			$seat = $_POST['me'][$index];
-			$seat_xy = $_POST['seat_xy'][$index];
-			// $ticket = $_POST['ticket'][$index];
-			
-			$sql = $conn->query("INSERT into reserves (bid, fullname, mobile, idno, email, seatnum, seat_xy) VALUES ('$bid','$fullname', '$mobile', '$idno','$email', '$seat', '$seat_xy')");
-			echo '<script type="text/javascript">window.location="selectseat.php?act=add";</script>';
-		}
-	}
-	// fetch seatid
-	$sqlseatId = "select seatnum from reserves where bid = '".$bid."'";
-	$b = $conn->query($sqlseatId);
-	$c = $b-> fetch_assoc();
-	
-	if(isset($_REQUEST['act']) && @$_REQUEST['act']=="add")
-	{
-		$errormsg = "<div class='alert alert-success'> <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Success!</strong> Seat(s) selected successfully. Click <a href='getTicket.php?seatID=".$c['seatnum']."'>Here</a> To print Your Ticket.</div>";
-	}	
+	$ticketId = createTicketID();	
 ?>
 <!DOCTYPE html>
 	<html lang="en" class="no-js">
@@ -116,12 +92,14 @@
 									<h4>Customer Details</h4>
 									<?php echo $errormsg; ?>
 									<div class="booking-details">
-										<form action="selectseat.php" class="needs-validation" role="form" method="POST" novalidate>
+										<form action="getTicket.php" class="needs-validation" role="form" method="POST" novalidate>
 											<input type="hidden" name="bid" value="<?php echo $bid;?>">
 											<h3> Selected Seats (<span id="counter">0</span>):</h3>
 											<ul id="selected-seats">
 											</ul>
 											<h3>Total Cost: <b>Ksh. <span id="total" style="color: red;">0</span></b></h3>
+											<input type="hidden" name="id" value="<?php echo $id;?>">
+											<input type="hidden" name="action" value="<?php echo $action;?>">
 											<button type="submit" name="save" class="checkout-button btn btn-danger">Book Now</button>
 										</form>
 									</div>
@@ -221,7 +199,7 @@
 												</div>\
 												<div class="form-group row">\
 													<div class="col-sm-8 offset-2">\
-														<input type="hidden" class="form-control" name="me[]" value="'+this.settings.label+'" readonly>\
+														<input type="hidden" class="form-control" name="seatnum[]" value="'+this.settings.label+'" readonly>\
 														<input type="hidden" class="form-control" name="seat_xy[]" value="'+this.settings.id+'" readonly>\
 														<a href="#" class="cancel-cart-item btn btn-success btn-sm">Cancel</a>\
 													</div>\
