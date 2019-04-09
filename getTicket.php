@@ -10,11 +10,11 @@
 		$bid = mysqli_real_escape_string($conn, $_POST['bid']);
 		foreach($_POST['fullname'] as $index => $val){
 			$fullname = $val;
-			$mobile = $_POST['mobile'][$index];
-			$idno = $_POST['idno'][$index];
-			$email = $_POST['email'][$index];
-			$seat = $_POST['seatnum'][$index];
-			$seat_xy = $_POST['seat_xy'][$index];
+			$mobile = mysqli_real_escape_string($conn, $_POST['mobile'][$index]);
+			$idno = mysqli_real_escape_string($conn, $_POST['idno'][$index]);
+			$email = mysqli_real_escape_string($conn, $_POST['email'][$index]);
+			$seat = mysqli_real_escape_string($conn, $_POST['seatnum'][$index]);
+			$seat_xy = mysqli_real_escape_string($conn, $_POST['seat_xy'][$index]);
 			
 			$sql = $conn->query("INSERT into reserves (bid, fullname, mobile, idno, email, seatnum, seat_xy) VALUES ('$bid','$fullname', '$mobile', '$idno','$email', '$seat', '$seat_xy')");
 			echo '<script type="text/javascript">window.location="getTicket.php?act=book";</script>';
@@ -23,7 +23,7 @@
 	
 	if(isset($_REQUEST['act']) && @$_REQUEST['act']=="book")
 	{
-		$errormsg = "<div class='alert alert-success'> <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Success!</strong> Seat(s) selected successfully. Your Ticket Number Is: <></div>";
+		$errormsg = "<div class='alert alert-success'> <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Success!</strong> Seat(s) selected successfully. Your Ticket Number is: []. <h6>Click on The Home Page, Print Ticket Tab, Insert the TicketID and Mobile Number To print Your Ticket. E-ticket notification sent to email and Mobile Number. Thank You, Welcome </h6><span><i class='fa fa-envelope'></i></span></div>";
 	}	
 ?>
 <!DOCTYPE html>
@@ -67,67 +67,7 @@
 		            </div>
 		        </div>						
 				<div class="row">
-					<!-- <div class="col-lg-4">
-						<div class="single-destinations">
-							<div class="thumb">
-								<img src="../assets/img/favicon.png" style="width:200px; height=200px; margin-left:70px;" alt="">
-							</div>
-							<div class="details">
-								<h4 class="d-flex justify-content-between">
-									<span>Ena Travel Company</span>                              	
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>				
-									</div>	
-								</h4>
-													
-								<ul class="package-list">
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Ticket No:</h6></span>
-										<span>'.$res['busregno'].'</span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Passenger Name</h6></span>
-										<span>'.$res['fullname'].'</span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Phone Number</h6></span>
-										<span>070000000</span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Seat Number</h6></span>
-										<span>3</span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Fare</h6></span>
-										<span>Ksh. 800</span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Bus Name</h6></span>
-										<span>KCR 111K</span>
-									</li>	
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Route</h6></span>
-										<span>Migori - Nairobi</span>
-									</li>	
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Travel Date</h6></span>
-										<span>2019 - 02 - 30</span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h6>Departure</h6></span>
-										<span>0900hrs</span>
-									</li>										
-									<li class="d-flex justify-content-between align-items-center">
-										<a href="#" class="btn btn-primary btn-block">Print</a>
-									</li>													
-								</ul>
-							</div>
-						</div>					
-                	</div>  -->
+					
 				</div>
             </div>
         </section>

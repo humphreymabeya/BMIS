@@ -43,81 +43,82 @@
 		                </div>
 		            </div>
 		        </div>						
-				<div class="row">
-                <?php
-                    // query database
-                    if(isset($_POST['print'])){
-                        $sql = "select reserves.ticketId, reserves.mobile, reserves.fullname, reserves.seatnum, bus.busregno, bus.traveldate, bus.departure, route.routename, route.price FROM  reserves INNER JOIN bus ON reserves.bid=bus.id INNER JOIN route ON bus.route=route.id WHERE reserves.ticketId = '".$ticketId."' AND reserves.mobile = '".$mobile."'";
-                        // $sql = "select a.ticketId, a.mobile, a.fullname, a.seatnum, b.busregno, b.traveldate, b.departure, c.routename, c.price FROM reserves as a, bus as b, c as route WHERE a.bid = b.id AND a.ticketId = '".$ticketId."' AND a.mobile = '".$mobile."'";
-                        // $sql = "SELECT * FROM reserves WHERE ticketID = '".$ticketId."' AND mobile = '".$mobile."'";
-                        $a = $conn->query($sql);
-                        $result = $a->fetch_assoc();
-                    
-                        echo '
-					<div class="col-lg-4 col-md-4 col-sm-4 offset-4">
-						<div class="single-destinations">
-							<div class="thumb">
-								<img src="../assets/img/favicon.png" style="width:200px; height=200px; margin-left:70px;" alt="">
-							</div>
-							<div class="details">
-								<h4 class="d-flex justify-content-between">
-									<span>Ena Travel Company</span>                              	
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>				
-									</div>	
-								</h4>
-													
-								<ul class="package-list">
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Ticket No:</h5></span>
-										<span><h6>'.$result['ticketId'].'</h6></h6></span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Passenger Name</h5></span>
-										<span><h6>'.$result['fullname'].'</h6></span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Phone Number</h5></span>
-										<span><h6>'.$result['mobile'].'</h6></span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Seat Number</h5></span>
-										<span><h6>'.$result['seatnum'].'</h6></span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Fare</h5></span>
-										<span><h6>Ksh. '.$result['price'].'</h6></span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Bus Name</h5></span>
-										<span><h6>'.$result['busregno'].'</h6></span>
-									</li>	
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Route</h5></span>
-										<span><h6>'.$result['routename'].'</h6></span>
-									</li>	
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Travel Date</h5></span>
-										<span><h6>'.$result['traveldate'].'</h6></span>
-									</li>
-									<li class="d-flex justify-content-between align-items-center">
-										<span><h5>Departure</h5></span>
-										<span><h6>'.$result['departure'].'</h6></span>
-									</li>										
-									<li class="d-flex justify-content-between align-items-center">
-										<a href="#" class="btn btn-primary btn-block">Print</a>
-									</li>													
-								</ul>
-							</div>
-						</div>					
-                	</div> 
-                    ';
-                    }
-                ?>
+				<div class="row justify-content-md-center">
+					<?php
+						// query database
+						if(isset($_POST['print'])){
+							$sql = "select reserves.ticketId, reserves.mobile, reserves.fullname, reserves.seatnum, bus.busregno, bus.traveldate, bus.departure, route.routename, route.price FROM  reserves INNER JOIN bus ON reserves.bid=bus.id INNER JOIN route ON bus.route=route.id WHERE reserves.ticketId = '".$ticketId."' AND reserves.mobile = '".$mobile."'";
+							// $sql = "select a.ticketId, a.mobile, a.fullname, a.seatnum, b.busregno, b.traveldate, b.departure, c.routename, c.price FROM reserves as a, bus as b, c as route WHERE a.bid = b.id AND a.ticketId = '".$ticketId."' AND a.mobile = '".$mobile."'";
+							// $sql = "SELECT * FROM reserves WHERE ticketID = '".$ticketId."' AND mobile = '".$mobile."'";
+							$a = $conn->query($sql);
+							$result = $a->fetch_assoc();
+						
+							echo '
+							<div class="col-lg-4" >
+								<div class="single-destinations" id="printableArea">
+									<div class="thumb">
+										<img src="../assets/img/favicon.png" style="width:200px; height=200px; margin-left:70px;" alt="">
+									</div>
+									<div class="details">
+										<h4 class="d-flex justify-content-between">
+											<span>Ena Travel Company</span>                              	
+											<div class="star">
+												<span class="fa fa-star checked"></span>
+												<span class="fa fa-star checked"></span>
+												<span class="fa fa-star checked"></span>
+												<span class="fa fa-star checked"></span>
+												<span class="fa fa-star"></span>				
+											</div>	
+										</h4>
+															
+										<ul class="package-list">
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Ticket No:</h5></span>
+												<span><h6>'.$result['ticketId'].'</h6></h6></span>
+											</li>
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Passenger Name</h5></span>
+												<span><h6>'.$result['fullname'].'</h6></span>
+											</li>
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Phone Number</h5></span>
+												<span><h6>'.$result['mobile'].'</h6></span>
+											</li>
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Seat Number</h5></span>
+												<span><h6>'.$result['seatnum'].'</h6></span>
+											</li>
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Fare</h5></span>
+												<span><h6>Ksh. '.$result['price'].'</h6></span>
+											</li>
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Bus Name</h5></span>
+												<span><h6>'.$result['busregno'].'</h6></span>
+											</li>	
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Route</h5></span>
+												<span><h6>'.$result['routename'].'</h6></span>
+											</li>	
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Travel Date</h5></span>
+												<span><h6>'.$result['traveldate'].'</h6></span>
+											</li>
+											<li class="d-flex justify-content-between align-items-center">
+												<span><h5>Departure</h5></span>
+												<span><h6>'.$result['departure'].'</h6></span>
+											</li>										
+																								
+										</ul>
+									</div>
+								</div>
+								<li class="d-flex justify-content-between align-items-center hiddden-print">
+									<button class="btn btn-primary btn-block" onclick="printDiv(\'printableArea\')"><i class="fa fa-print" aria-hidden="true" style="font-size: 17px;"> Print</i></button>				
+								</li>					
+							</div> 
+						';
+						}
+					?>
 				</div>
             </div>
         </section>
@@ -126,5 +127,17 @@
 		<!-- End footer Area -->	
 		<!-- scripts -->
 		<?php include("sections/footer2.php");?>
+		<script>
+			function printDiv(divName) {
+				var printContents = document.getElementById(divName).innerHTML;
+				var originalContents = document.body.innerHTML;
+
+				document.body.innerHTML = printContents;
+
+				window.print();
+
+				document.body.innerHTML = originalContents;
+			}
+		</script>
     </body>
 </html>
