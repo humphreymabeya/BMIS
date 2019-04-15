@@ -39,7 +39,6 @@
 			<title>ENA Travels | Bus List</title>
 			<?php include("sections/header.php");?>
 			<link rel="stylesheet" href="assets/css/seats.css">
-			<!-- <link rel="stylesheet" href="assets/css/jquery.seat-charts.css"> -->
 		</head>
 		<body>	
 			<!-- navbar -->
@@ -81,8 +80,10 @@
 									<br><br><br><br><br>
 									<h6 class="text-center">Back</h6>
 								</div><br>
-								<div class="details">
-									<h6>Booked</h6> <h6>Available</h6>
+								<div class="details text-center">
+									<h6>Booked - <img src="../assets/img/red.jpg" style="width:25px;height:25px;border-radius:4px"></h6><br>
+									<h6>Available - <img src="../assets/img/blue.png" style="width:25px;height:25px;border-radius:4px"></h6><br>
+									<h6>Selected - <img src="../assets/img/green.png" style="width:25px;height:25px;border-radius:4px"></h6>
 								</div>									
 							</div>
 						</div>
@@ -138,9 +139,8 @@
 						],
 						seats: {
 							e: {
-								// price   : 800,
 								price : <?php echo $result['price']; ?>,
-								classes : 'economy-class', //your custom CSS class
+								classes : 'economy-class', 
 								category: 'Economy Class'
 							}									
 						},

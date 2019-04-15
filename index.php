@@ -3,7 +3,7 @@
     $traveldate = $route = $action = $id = '';
 ?>
 <!DOCTYPE html>
-	<html lang="zxx" class="no-js">
+	<html lang="en" class="no-js">
 		<head>
 			 <!-- Favicon-->
 			<link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -123,7 +123,7 @@
 									<img class="img-fluid" src="../assets/img/d1.jpg" alt="">
 								</div>
 								<div class="desc">	
-									<!-- <a href="#" class="price-btn">$150</a>			 -->
+									
 									<h4>Nairobi</h4>
 									<p>Kenya</p>			
 								</div>
@@ -136,7 +136,7 @@
 									<img class="img-fluid" src="../assets/img/d2.jpg" alt="">
 								</div>
 								<div class="desc">	
-									<!-- <a href="#" class="price-btn">$250</a>			 -->
+									
 									<h4>Mombasa</h4>
 									<p>Kenya</p>			
 								</div>
@@ -149,7 +149,7 @@
 									<img class="img-fluid" src="../assets/img/d3.jpg" alt="">
 								</div>
 								<div class="desc">	
-									<!-- <a href="#" class="price-btn">$350</a>			 -->
+									
 									<h4>Kisumu</h4>
 									<p>Kenya</p>			
 								</div>

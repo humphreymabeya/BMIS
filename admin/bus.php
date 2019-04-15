@@ -89,9 +89,6 @@
                         <li><a href="#"><i class="fa fa-user"></i> Office Staff</a></li>
                     </ul>
                     </li>
-                    <!-- <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page                             </a></li> -->
-                    <!-- <li> <a href="#"> <i class="icon-mail"></i>Demo -->
-                        <!-- <div class="badge badge-warning">6 New</div></a></li> -->
                 </ul>
             </div>
             <div class="admin-menu">

@@ -83,7 +83,7 @@
                         <div class="logo text-uppercase"><strong class="text-primary">Ena Travels Company</strong></div>
                         <form class="text-left form-validate" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">
                             <div class="form-group-material <?php echo (!empty($username_err)) ? 'has-error': '';?>">
-                                <input id="login-username" type="text" name="username" value="<?php echo $username;?>" required data-msg="Please enter your username" class="input-material">
+                                <input id="login-username" type="text" name="username" value="<?php echo $username;?>" required data-msg="Please enter your username" class="input-material" autofocus>
                                 <label for="login-username" class="label-material">Username</label>
                                 <span class = "help-block" style="color:red;"><?php echo $username_err;?></span>
                             </div>

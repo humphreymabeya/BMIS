@@ -1,7 +1,7 @@
 <?php
-	$action = $id = $tid = '';
+	$action = $id = $tid = $myData = '';
 	include('database/config.php');
-	$fullname = $mobile = $idno = $email = $seat = $errormsg = $bid = '';  
+	$fullname = $mobile = $idno = $email = $seat = $errormsg = $ticket = $bid = '';  
 	$tid = $bid = isset($_GET['id'])?mysqli_real_escape_string($conn, $_GET['id']):'';
 	$sq = $conn->query("SELECT * FROM reserves WHERE id = '".$tid."'");
 	$res = $sq->fetch_assoc();
@@ -15,8 +15,18 @@
 			$email = mysqli_real_escape_string($conn, $_POST['email'][$index]);
 			$seat = mysqli_real_escape_string($conn, $_POST['seatnum'][$index]);
 			$seat_xy = mysqli_real_escape_string($conn, $_POST['seat_xy'][$index]);
-			
+			// save into database
 			$sql = $conn->query("INSERT into reserves (bid, fullname, mobile, idno, email, seatnum, seat_xy) VALUES ('$bid','$fullname', '$mobile', '$idno','$email', '$seat', '$seat_xy')");
+			
+			$sqlTicket = $conn->query("SELECT GROUP_CONCAT(CONCAT('''',fullname,'''')) AS fullnames FROM reserves where fullname = '".$fullname."' ");
+			$results2 = $sqlTicket->fetch_array(MYSQLI_ASSOC);
+			$res2 = $results2['fullnames'];
+			// fetch ticketID from database
+			$sql1 = $conn->query("SELECT GROUP_CONCAT(CONCAT('',ticketID,'')) AS tickets FROM reserves WHERE fullname IN($res2)");
+			$result = $sql1->fetch_array(MYSQLI_ASSOC);
+			$res = $result['tickets'];
+
+			echo '<script type="text/javascript">alert("Your Ticket ID is : '.$res.'");</script>';
 			echo '<script type="text/javascript">window.location="getTicket.php?act=book";</script>';
 		}
 	}
@@ -31,10 +41,8 @@
 	<head>
 		<!-- Favicon-->
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
-		<title>ENA Travels | Bus List</title>
+		<title>ENA Travels | Ticketing</title>
 		<?php include("sections/header.php");?>
-		<link rel="stylesheet" href="assets/css/seats.css">
-		<!-- <link rel="stylesheet" href="assets/css/jquery.seat-charts.css"> -->
 	</head>
 	<body>	
 		<!-- navbar -->
@@ -60,7 +68,7 @@
 		        <div class="row d-flex justify-content-center">
 		            <div class="menu-content pb-40 col-lg-8">
 		                <div class="title text-center">
-		                    <h1 class="mb-10">Tickets Section</h1> <?php echo $res['ticketID']; ?>
+		                    <h1 class="mb-10">Tickets Section</h1>
 		                    <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to.</p>
 							<?php echo $errormsg; ?>
 		                </div>

@@ -48,8 +48,6 @@
 						// query database
 						if(isset($_POST['print'])){
 							$sql = "select reserves.ticketId, reserves.mobile, reserves.fullname, reserves.seatnum, bus.busregno, bus.traveldate, bus.departure, route.routename, route.price FROM  reserves INNER JOIN bus ON reserves.bid=bus.id INNER JOIN route ON bus.route=route.id WHERE reserves.ticketId = '".$ticketId."' AND reserves.mobile = '".$mobile."'";
-							// $sql = "select a.ticketId, a.mobile, a.fullname, a.seatnum, b.busregno, b.traveldate, b.departure, c.routename, c.price FROM reserves as a, bus as b, c as route WHERE a.bid = b.id AND a.ticketId = '".$ticketId."' AND a.mobile = '".$mobile."'";
-							// $sql = "SELECT * FROM reserves WHERE ticketID = '".$ticketId."' AND mobile = '".$mobile."'";
 							$a = $conn->query($sql);
 							$result = $a->fetch_assoc();
 						

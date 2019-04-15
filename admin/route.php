@@ -103,7 +103,6 @@
                     <li> <a href=""> <i class="fa fa-times-circle-o"> </i>Cancellations</a></li>
                     <li> <a href=""> <i class="fa fa-list-alt"> </i>Booking Details</a></li>
                     <li> <a href=""> <i class="fa fa-ticket"> </i>Seat Layouts</a></li>
-
                 </ul>
             </div>
         </div>

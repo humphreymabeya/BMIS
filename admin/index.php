@@ -166,7 +166,7 @@
 										<li class="d-flex justify-content-between"> 
 											<div class="left-col d-flex">
 												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+												<div class="title"><strong>Traffic Highlights</strong>
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
 												</div>
 											</div>
@@ -178,7 +178,7 @@
 										<li class="d-flex justify-content-between"> 
 											<div class="left-col d-flex">
 												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+												<div class="title"><strong>New Routes Update</strong>
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
 												</div>
 											</div>
@@ -190,7 +190,7 @@
 										<li class="d-flex justify-content-between"> 
 											<div class="left-col d-flex">
 												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+												<div class="title"><strong>New Vacancies</strong>
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
 												</div>
 											</div>
@@ -202,7 +202,7 @@
 										<li class="d-flex justify-content-between"> 
 											<div class="left-col d-flex">
 												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+												<div class="title"><strong>Holiday Festivities Vouchers</strong>
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
 												</div>
 											</div>
@@ -214,19 +214,7 @@
 										<li class="d-flex justify-content-between"> 
 											<div class="left-col d-flex">
 												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-												</div>
-											</div>
-											<div class="right-col text-right">
-												<div class="update-date">24<span class="month">Jan</span></div>
-											</div>
-										</li>
-										<!-- Item-->
-										<li class="d-flex justify-content-between"> 
-											<div class="left-col d-flex">
-												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>Lorem ipsum dolor sit amet.</strong>
+												<div class="title"><strong>End year Annual Meetings</strong>
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
 												</div>
 											</div>
