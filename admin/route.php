@@ -73,7 +73,6 @@
                 <h5 class="sidenav-heading">Main</h5>
                 <ul id="side-main-menu" class="side-menu list-unstyled">                  
                     <li><a href="index.php"> <i class="icon-home"></i>Home</a></li>
-                    <!-- <li><a href="forms.html"> <i class="icon-form"></i>Forms</a></li> -->
                     <li><a href="bus.php"><i class="fa fa-bus"></i>Bus Management</a></li>
                     <li class="active"><a href="route.php"> <i class="fa fa-road"></i>Route Details</a></li>
                     <li><a href="#staff" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-group"></i>Staff </a>
@@ -83,9 +82,6 @@
                         <li><a href="#"><i class="fa fa-user"></i> Office Staff</a></li>
                     </ul>
                     </li>
-                    <!-- <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page                             </a></li> -->
-                    <!-- <li> <a href="#"> <i class="icon-mail"></i>Demo -->
-                        <!-- <div class="badge badge-warning">6 New</div></a></li> -->
                 </ul>
             </div>
             <div class="admin-menu">

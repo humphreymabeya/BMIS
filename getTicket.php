@@ -1,5 +1,5 @@
 <?php
-	$action = $id = $tid = $myData = '';
+	$action = $id = $tid = '';
 	include('database/config.php');
 	$fullname = $mobile = $idno = $email = $seat = $errormsg = $ticket = $bid = '';  
 	$tid = $bid = isset($_GET['id'])?mysqli_real_escape_string($conn, $_GET['id']):'';
