@@ -1,6 +1,6 @@
 <!-- footer -->
 <footer>
-        <div class="footer-top">
+        <div class="footer-top" id="address">
             <div class="container section-3">
                 <div class="row">
                     <div class="col-md-4 col-lg-4 footer-about wow fadeInUp">
@@ -57,16 +57,16 @@
                                         <a class="nav-link scroll-link" href="#top-content">Top</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link scroll-link" href="#section-1">Our Fleet</a>
+                                        <a class="nav-link" href="index.php#gallery">Our Fleet</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link scroll-link" href="#fare-sect">Fares</a>
+                                        <a class="nav-link" href="index.php#fare-sect">Fares</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link scroll-link" href="#section-3">Contact Us</a>
+                                        <a class="nav-link" href="contact.php">Contact Us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Book Now</a>
+                                        <a class="nav-link scroll-link" href="index.php#booking">Book Now</a>
                                     </li>
                                 </ul>
                             </div>

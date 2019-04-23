@@ -176,7 +176,7 @@
 												<div class="form-group row">\
 													<label class="col-form-label col-sm-2">Mobile No.:</label>\
 														<div class="col-sm-10">\
-															<input type="text" name="mobile[]" class="form-control" id="mobile" required/>\
+															<input type="number" name="mobile[]" class="form-control" id="mobile" required/>\
 															<div class="valid-feedback"></div>\
 															<div class="invalid-feedback">Please Provide a valid Mobile Number</div>\
 														</div>\
@@ -184,7 +184,7 @@
 												<div class="form-group row">\
 													<label class="col-form-label col-sm-2">ID Number:</label>\
 														<div class="col-sm-10">\
-															<input type="text" name="idno[]" class="form-control" id="idno" required/>\
+															<input type="number" name="idno[]" class="form-control" id="idno" required/>\
 															<div class="valid-feedback"></div>\
 															<div class="invalid-feedback">Please Provide a valid ID Number</div>\
 														</div>\

@@ -19,63 +19,111 @@
 				<div class="container-fluid">
 					<div class="row">
 						<!-- Count item widget-->
-						<div class="col-xl-2 col-md-4 col-6">
+						<div class="col-xl-3 col-md-4 col-6">
 							<div class="wrapper count-title d-flex">
-								<div class="icon"><i class="icon-user"></i></div>
-								<div class="name"><strong class="text-uppercase">Routes</strong><span>Last 7 days</span>
-									<div class="count-number">25</div>
+								<div class="icon"><i class="fa fa-road"></i></div>
+								<div class="name"><strong class="text-uppercase">Routes</strong><span>All Time</span>
+									<?php
+										$conn->select_db('BMIS');
+										$result = $conn->query("Select * from route where delete_status='0'");
+                                        $num_rows = $result->num_rows;
+									?>
+									<div class="count-number"> <?php echo $num_rows; ?> </div>
 								</div>
 							</div>
 						</div>
 						<!-- Count item widget-->
-						<div class="col-xl-2 col-md-4 col-6">
+						<div class="col-xl-3 col-md-4 col-6">
 							<div class="wrapper count-title d-flex">
-								<div class="icon"><i class="icon-padnote"></i></div>
-								<div class="name"><strong class="text-uppercase">Passengers</strong><span>Last 5 days</span>
+								<div class="icon"><i class="icon-user"></i></div>
+								<div class="name"><strong class="text-uppercase">Travellers</strong><span>Last 7 days</span>
 									<div class="count-number">400</div>
 								</div>
 							</div>
 						</div>
 						<!-- Count item widget-->
-						<div class="col-xl-2 col-md-4 col-6">
+						<div class="col-xl-3 col-md-4 col-6">
 							<div class="wrapper count-title d-flex">
-								<div class="icon"><i class="icon-check"></i></div>
-								<div class="name"><strong class="text-uppercase">Buses</strong><span>Last 2 months</span>
+								<div class="icon"><i class="fa fa-bus"></i></div>
+								<div class="name"><strong class="text-uppercase">Buses</strong><span>Last 7 days</span>
 									<div class="count-number">342</div>
 								</div>
 							</div>
 						</div>
 						<!-- Count item widget-->
-						<div class="col-xl-2 col-md-4 col-6">
+						<div class="col-xl-3 col-md-4 col-6">
+							<div class="wrapper count-title d-flex">
+								<div class="icon"><i class="icon-user"></i></div>
+								<div class="name"><strong class="text-uppercase">Drivers</strong><span>All Time</span>
+									<?php
+										$conn->select_db('BMIS');
+										$result = $conn->query("Select * from driver where delete_status='0'");
+                                        $num_rows = $result->num_rows;
+									?>
+									<div class="count-number"> <?php echo $num_rows; ?> </div>
+								</div>
+							</div>
+						</div>
+						<!-- Count item widget-->
+						<!-- <div class="col-xl-2 col-md-4 col-6">
 							<div class="wrapper count-title d-flex">
 								<div class="icon"><i class="icon-bill"></i></div>
-								<div class="name"><strong class="text-uppercase">Staff</strong><span>Last 2 days</span>
-									<div class="count-number">123</div>
+								<div class="name"><strong class="text-uppercase">Finances</strong><span>Last 7 days</span>
+									<div class="count-number">Kshs. 92, 000</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!-- Count item widget-->
-						<div class="col-xl-2 col-md-4 col-6">
-							<div class="wrapper count-title d-flex">
-								<div class="icon"><i class="icon-list"></i></div>
-								<div class="name"><strong class="text-uppercase">Finances</strong><span>Last 3 months</span>
-									<div class="count-number">92</div>
-								</div>
-							</div>
-						</div>
-						<!-- Count item widget-->
-						<div class="col-xl-2 col-md-4 col-6">
+						<!-- <div class="col-xl-2 col-md-4 col-6">
 							<div class="wrapper count-title d-flex">
 								<div class="icon"><i class="icon-list-1"></i></div>
 								<div class="name"><strong class="text-uppercase">Profits</strong><span>Last 7 days</span>
-									<div class="count-number">70</div>
+									<div class="count-number">Kshs. 70, 000</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</section>
 			<!-- Header Section-->
+			<!-- charts section -->
+			<section class="dashboard-header section-padding">
+        		<div class="container-fluid">
+          			<div class="row d-flex align-items-md-stretch">
+            			<!-- Bar Chart -->
+						<div class="col-lg-6 col-md-12 flex-lg-last flex-md-first align-self-baseline">
+							<div class="card sales-report">
+								<h2 class="display h4">Financial Analysis report</h2>
+								<p> Graphical analysis of the monthly generated income.</p>
+								<div class="bar-chart">
+									<canvas id="barChart"></canvas>
+								</div>
+							</div>
+						</div>
+						<!-- Line Chart -->
+						<div class="col-lg-6 col-md-12 flex-lg-last flex-md-first align-self-baseline">
+							<div class="card sales-report">
+								<h2 class="display h4">Passenger Bookings report</h2>
+								<p> Graphical analysis of bookings in the current year.</p>
+								<div class="line-chart">
+									<canvas id="lineChart"></canvas>
+								</div>
+							</div>
+						</div>
+						<!-- Pie Chart-->
+						<!-- <div class="col-lg-3 col-md-6">
+							<div class="card project-progress">
+								<h2 class="display h4">Project Beta progress</h2>
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								<div class="pie-chart">
+									<canvas id="pieChart" width="300" height="300"> </canvas>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</section>
+			<!-- end of charts section -->
 			<!-- Statistics section -->
 			<section class="statistics">
 				<div class="container-fluid">
@@ -84,24 +132,34 @@
 							<!-- Income-->
 							<div class="card income text-center">
 								<div class="icon"><i class="icon-line-chart"></i></div>
-								<div class="number">126,418</div><strong class="text-primary">All Transactions</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+								<div class="number">Kshs. 126,418</div><strong class="text-primary">All Transactions</strong>
+									<p>Payments made through bookings by customers.</p>
 								</div>
 						</div>
 						<div class="col-lg-4">
 							<!-- Income-->
 							<div class="card income text-center">
 								<div class="icon"><i class="icon-user"></i></div>
-								<div class="number">584, 689</div><strong class="text-primary">Passengers</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+									<?php
+										$conn->select_db('BMIS');
+										$result = $conn->query("Select * from reserves where status='Booked'");
+                                        $num_rows = $result->num_rows;
+									?>
+								<div class="number"> <?php echo $num_rows; ?> </div><strong class="text-primary">Passengers</strong>
+									<p>All Customers that have travelled through our fleet.</p>
 								</div>
 						</div>
 						<div class="col-lg-4">
 							<!-- Income-->
 							<div class="card income text-center">
 								<div class="icon"><i class="icon-paper-airplane"></i></div>
-								<div class="number">108</div><strong class="text-primary">Our Fleet</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+									<?php
+										$conn->select_db('BMIS');
+										$result = $conn->query("Select * from bus where delete_status='0'");
+                                        $num_rows = $result->num_rows;
+									?>
+								<div class="number"> <?php echo $num_rows; ?> </div><strong class="text-primary">Our Fleet</strong>
+									<p>All fleet operating our preferred routes.</p>
 								</div>
 						</div>
 					</div>
@@ -116,20 +174,20 @@
 							<div class="card income text-center">
 								<div class="icon"><i class="icon-user"></i></div>
 								<div class="number">54</div><strong class="text-primary">Our Staff</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+									<p>Our total staff operating the available fleet.</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<!-- Monthly Usage-->
 								<div class="card data-usage">
-									<h2 class="display h4">Monthly Usage</h2>
+									<h2 class="display h4">Server Usage</h2>
 									<div class="row d-flex align-items-center">
 										<div class="col-sm-6">
 											<div id="progress-circle" class="d-flex align-items-center justify-content-center"></div>
 										</div>
 									<div class="col-sm-6"><strong class="text-primary">80.56 Gb</strong><small>Current Plan</small><span>100 Gb Monthly</span></div>
 								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+								<p>Server status and storage transactions.</p>
 							</div>
 						</div>
 						<div class="col-lg-4">
@@ -137,7 +195,7 @@
 							<div class="card user-activity">
 								<h2 class="display h4">User Activity</h2>
 								<div class="number">210</div>
-								<h3 class="h4 display">Social Users</h3>
+								<h3 class="h4 display">Customer visits</h3>
 								<div class="progress">
 									<div role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
 								</div>
@@ -162,66 +220,7 @@
 								</div>
 								<div id="updates-box" role="tabpanel" class="collapse show">
 									<ul class="news list-unstyled">
-										<!-- Item-->
-										<li class="d-flex justify-content-between"> 
-											<div class="left-col d-flex">
-												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>Traffic Highlights</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-												</div>
-											</div>
-											<div class="right-col text-right">
-												<div class="update-date">24<span class="month">Jan</span></div>
-											</div>
-										</li>
-										<!-- Item-->
-										<li class="d-flex justify-content-between"> 
-											<div class="left-col d-flex">
-												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>New Routes Update</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-												</div>
-											</div>
-											<div class="right-col text-right">
-												<div class="update-date">24<span class="month">Jan</span></div>
-											</div>
-										</li>
-										<!-- Item-->
-										<li class="d-flex justify-content-between"> 
-											<div class="left-col d-flex">
-												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>New Vacancies</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-												</div>
-											</div>
-											<div class="right-col text-right">
-												<div class="update-date">24<span class="month">Jan</span></div>
-											</div>
-										</li>
-										<!-- Item-->
-										<li class="d-flex justify-content-between"> 
-											<div class="left-col d-flex">
-												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>Holiday Festivities Vouchers</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-												</div>
-											</div>
-											<div class="right-col text-right">
-												<div class="update-date">24<span class="month">Jan</span></div>
-											</div>
-										</li>
-										<!-- Item-->
-										<li class="d-flex justify-content-between"> 
-											<div class="left-col d-flex">
-												<div class="icon"><i class="icon-rss-feed"></i></div>
-												<div class="title"><strong>End year Annual Meetings</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-												</div>
-											</div>
-											<div class="right-col text-right">
-												<div class="update-date">24<span class="month">Jan</span></div>
-											</div>
-										</li>
+										
 									</ul>
 								</div>
 							</div>
@@ -233,70 +232,14 @@
 								<div id="feeds-header" class="card-header d-flex justify-content-between align-items-center">
 									<h2 class="h5 display"><a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box">Your daily Feeds </a></h2>
 									<div class="right-column">
-										<div class="badge badge-primary">10 messages</div><a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box"><i class="fa fa-angle-down"></i></a>
+										<div class="badge badge-primary">10 new alerts</div><a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box"><i class="fa fa-angle-down"></i></a>
 									</div>
 								</div>
 								<div id="feeds-box" role="tabpanel" class="collapse show">
 									<div class="feed-box">
 										<ul class="feed-elements list-unstyled">
 											<!-- List-->
-											<li class="clearfix">
-												<div class="feed d-flex justify-content-between">
-													<div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
-														<div class="content"><strong>Aria Smith</strong><small>Posted a new blog </small>
-															<div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
-														</div>
-													</div>
-													<div class="date"><small>5min ago</small></div>
-												</div>
-											</li>
-											<!-- List-->
-											<li class="clearfix">
-												<div class="feed d-flex justify-content-between">
-													<div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
-														<div class="content"><strong>Frank Williams</strong><small>Posted a new blog </small>
-															<div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
-															<div class="CTAs"><a href="#" class="btn btn-xs btn-dark"><i class="fa fa-thumbs-up"> </i>Like</a><a href="#" class="btn btn-xs btn-dark"><i class="fa fa-heart"> </i>Love</a></div>
-														</div>
-													</div>
-													<div class="date"><small>5min ago</small></div>
-												</div>
-											</li>
-											<!-- List-->
-											<li class="clearfix">
-												<div class="feed d-flex justify-content-between">
-													<div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
-														<div class="content"><strong>Ashley Wood</strong><small>Posted a new blog </small>
-															<div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
-														</div>
-													</div>
-													<div class="date"><small>5min ago</small></div>
-												</div>
-											</li>
-											<!-- List-->
-											<li class="clearfix">
-												<div class="feed d-flex justify-content-between">
-													<div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
-														<div class="content"><strong>Jason Doe</strong><small>Posted a new blog </small>
-															<div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
-														</div>
-													</div>
-													<div class="date"><small>5min ago</small></div>
-												</div>
-												<div class="message-card"> <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</small></div>
-												<div class="CTAs pull-right"><a href="#" class="btn btn-xs btn-dark"><i class="fa fa-thumbs-up"> </i>Like</a></div>
-											</li>
-											<!-- List-->
-											<li class="clearfix">
-												<div class="feed d-flex justify-content-between">
-													<div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="../assets/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle"></a>
-														<div class="content"><strong>Sam Martinez</strong><small>Posted a new blog </small>
-															<div class="full-date"><small>Today 5:60 pm - 12.06.2014</small></div>
-														</div>
-													</div>
-													<div class="date"><small>5min ago</small></div>
-												</div>
-											</li>
+											
 										</ul>
 									</div>
 								</div>
@@ -311,54 +254,7 @@
 								</div>
 								<div id="activities-box" role="tabpanel" class="collapse show">
 									<ul class="activities list-unstyled">
-										<!-- Item-->
-										<li>
-											<div class="row">
-												<div class="col-4 date-holder text-right">
-													<div class="icon"><i class="icon-clock"></i></div>
-													<div class="date"> <span>6:00 am</span><span class="text-info">6 hours ago</span></div>
-												</div>
-												<div class="col-8 content"><strong>Meeting</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.                </p>
-												</div>
-											</div>
-										</li>
-										<!-- Item-->
-										<li>
-											<div class="row">
-												<div class="col-4 date-holder text-right">
-													<div class="icon"><i class="icon-clock"></i></div>
-													<div class="date"> <span>6:00 am</span><span class="text-info">6 hours ago</span></div>
-												</div>
-												<div class="col-8 content"><strong>Meeting</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.                </p>
-												</div>
-											</div>
-										</li>
-										<!-- Item-->
-										<li>
-											<div class="row">
-												<div class="col-4 date-holder text-right">
-													<div class="icon"><i class="icon-clock"></i></div>
-													<div class="date"> <span>6:00 am</span><span class="text-info">6 hours ago</span></div>
-												</div>
-												<div class="col-8 content"><strong>Meeting</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.                </p>
-												</div>
-											</div>
-										</li>
-										<!-- Item-->
-										<li>
-											<div class="row">
-												<div class="col-4 date-holder text-right">
-													<div class="icon"><i class="icon-clock"></i></div>
-													<div class="date"> <span>6:00 am</span><span class="text-info">6 hours ago</span></div>
-												</div>
-												<div class="col-8 content"><strong>Meeting</strong>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.                </p>
-												</div>
-											</div>
-										</li>
+										
 									</ul>
 								</div>
 							</div>

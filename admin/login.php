@@ -74,6 +74,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> Login | ENA Travels</title>
         <?php include('admin-sections/header.php'); ?>
+        <style type="text/css">
+            .page{
+                background:url(../assets/img/scania3.jpg) no-repeat center fixed;
+                -webkit-background-size:cover;
+                -moz-background-size:cover;
+                -o-background-size:cover;
+                background-size:cover;
+            }
+        </style>
     </head>
     <body>
         <div class="page login-page">

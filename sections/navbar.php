@@ -28,28 +28,12 @@
 			<nav id="nav-menu-container">
 				<ul class="nav-menu">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="#fare-sect">Fares</a></li>
-					<li><a href="#">Gallery</a></li>
-					<li><a href="#">Fleet</a></li>
-							<!-- <li><a href="insurance.html">Routes</a></li>
-							<li class="menu-has-children"><a href="">Blog</a>
-								<ul>
-								<li><a href="blog-home.html">Blog Home</a></li>
-								<li><a href="blog-single.html">Blog Single</a></li>
-								</ul>
-							</li>	
-							<li class="menu-has-children"><a href="">Pages</a>
-								<ul>
-									<li><a href="elements.html">Elements</a></li>
-									<li class="menu-has-children"><a href="">Level 2 </a>
-										<ul>
-										<li><a href="#">Item One</a></li>
-										<li><a href="#">Item Two</a></li>
-										</ul>
-									</li>					                		
-								</ul>
-							</li>					          					          		           -->
-				    <li><a href="contact.html">Contact Us</a></li>
+					<li><a href="index.php#fare-sect">Fares</a></li>
+					<li><a href="index.php#gallery">Gallery</a></li>
+					<li><a href="index.php#gallery">Fleet</a></li>
+					<li><a href="index.php#destinations">Destinations</a></li>
+					<li><a href="index.php#address">Address</a></li>
+				    <li><a href="contact.php">Contact Us</a></li>
 				</ul>
 			</nav><!-- #nav-menu-container -->					      		  
 		</div>

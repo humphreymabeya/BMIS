@@ -27,7 +27,7 @@
 							</p>
 							<a href="#top-sect" class="btn btn-success text-uppercase">Get Started</a>
 						</div>
-						<div class="col-lg-4 col-md-6 banner-right">
+						<div class="col-lg-4 col-md-6 banner-right" id="booking">
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
 							  <li class="nav-item">
 							    <a class="nav-link active" id="book-tab" data-toggle="tab" href="#book" role="tab" aria-controls="book" aria-selected="true">Book Now</a>
@@ -68,13 +68,17 @@
 									</form>
 								</div>
 								<div class="tab-pane fade" id="print" role="tabpanel" aria-labelledby="print-tab">
-									<form class="form-wrap" action="printTicket.php" method="POST">
+									<form class="form-wrap needs-validation" role="form" action="printTicket.php" method="POST" novalidate>
 										<div class="form-row">
 											<div class="form-group col-12">
-												<input type="text" class="form-control" name="ticketId" placeholder="Ticket ID " onfocus="this.placeholder = ''" onblur="this.placeholder = 'TicketID '">									
+												<input type="text" class="form-control" name="ticketId" placeholder="Ticket ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'TicketID '" >									
+												<div class="valid-feedback"></div>
+												<div class="invalid-feedback">Please Provide a valid Ticket ID</div>
 											</div>
 											<div class="form-group col-12">	
 												<input type="text" class="form-control" name="mobileNo" placeholder="Mobile Number " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'">
+												<div class="valid-feedback"></div>
+												<div class="invalid-feedback">Please Provide a valid Mobile Number</div>
 											</div>	
 											<div class="form-group col-12">
 												<button type="submit" name="print" class="btn btn-block btn-primary text-uppercase">Print Ticket</button>	
@@ -105,7 +109,7 @@
 			<!-- End banner Area -->
 
 			<!-- Start popular-destination Area -->
-			<section class="popular-destination-area section-gap" id="top-sect">
+			<section class="popular-destination-area section-gap" id="destinations">
 				<div class="container">
 		            <div class="row d-flex justify-content-center">
 		                <div class="menu-content pb-70 col-lg-8">
@@ -120,7 +124,7 @@
 							<div class="single-destination relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>
-									<img class="img-fluid" src="../assets/img/d1.jpg" alt="">
+									<img class="img-fluid" src="../assets/img/d1.jpg" style="height:200px;" alt="">
 								</div>
 								<div class="desc">	
 									
@@ -133,7 +137,7 @@
 							<div class="single-destination relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>
-									<img class="img-fluid" src="../assets/img/d2.jpg" alt="">
+									<img class="img-fluid" src="../assets/img/d2.jpg" style="height:200px;"  alt="">
 								</div>
 								<div class="desc">	
 									
@@ -146,7 +150,7 @@
 							<div class="single-destination relative">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>
-									<img class="img-fluid" src="../assets/img/d3.jpg" alt="">
+									<img class="img-fluid" src="../assets/img/d3.jpg" style="height:200px;"  alt="">
 								</div>
 								<div class="desc">	
 									
@@ -287,52 +291,52 @@
 						<div class="col-lg-3 col-md-6">
 							<div class="single-other-issue">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/o1.jpg" alt="">					
+									<img class="img-fluid" src="assets/img/scania2.jpg" style="height:155px;" alt="">					
 								</div>
 								<a href="#">
 									<h4>Hire a Bus</h4>
 								</a>
 								<p>
-									The preservation of human life is the ultimate value, a pillar of ethics and the foundation.
+									We can assist you to get to your preffered destinations at comfort in large numbers by chattering our fleet at affordable prices.
 								</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6">
 							<div class="single-other-issue">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/o2.jpg" alt="">					
+									<img class="img-fluid" src="assets/img/scania12.jpeg" style="height:155px;" alt="">					
 								</div>
 								<a href="#">
 									<h4>Bus Booking</h4>
 								</a>
 								<p>
-									I was always somebody who felt quite sorry for myself, what I had not got compared.
+									Make a booking anytime, anywhere at the best of your comfort with your device and travel with us.
 								</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6">
 							<div class="single-other-issue">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/o3.jpg" alt="">					
+									<img class="img-fluid" src="assets/img/fleet2.jpeg" style="height:155px;" alt="">					
 								</div>
 								<a href="#">
 									<h4>Shuttle Services</h4>
 								</a>
 								<p>
-									The following article covers a topic that has recently moved to center stage–at least it seems.
+									In a hurry to get to your destination? Missed a ticket in our buses, shuttle services are available at any moment.
 								</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6">
 							<div class="single-other-issue">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/o4.jpg" alt="">					
+									<img class="img-fluid" src="assets/img/mail.jpg"  style="height:155px;" alt="">					
 								</div>
 								<a href="#">
 									<h4>Mail Services</h4>
 								</a>
 								<p>
-									There are many kinds of narratives and organizing principles. Science is driven by evidence.
+									With our diverse routes, feel free to send your parcels with us and be ensured of safe and timely deliveries.
 								</p>
 							</div>
 						</div>																		
@@ -475,17 +479,17 @@
 					<div class="row align-items-center justify-content-end">
 						<div class="col-lg-6 col-md-12 home-about-left">
 							<h1>
-								Did not find your Package? <br>
-								Feel free to ask us. <br>
-								We‘ll make it for you
+								Did you enjoy your travel? <br>
+								Feel free to talk to us. <br>
+								We‘ll strive to make it more enjoyable for you
 							</h1>
 							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.
+								with our aim being exemplary travelling at the best of comfort, feel free to make suggestions or complains about the services we offer.
 							</p>
-							<a href="#" class="primary-btn text-uppercase">request custom price</a>
+							<a href="#" class="primary-btn text-uppercase">raise complains</a>
 						</div>
 						<div class="col-lg-6 col-md-12 home-about-right no-padding">
-							<img class="img-fluid" src="assets/img/about-img.jpg" alt="">
+							<img class="img-fluid" src="assets/img/scania6.JPG" alt="">
 						</div>
 					</div>
 				</div>	
@@ -493,14 +497,14 @@
 			<!-- End home-about Area -->
 			
 	
-			<!-- Start blog Area -->
+			<!-- Start gallery Area -->
 			<section class="recent-blog-area section-gap">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-9">
+						<div class="menu-content pb-60 col-lg-9" id="gallery">
 							<div class="title text-center">
-								<h1 class="mb-10">Latest from Our Blog</h1>
-								<p>With the exception of Nietzsche, no other madman has contributed so much to human sanity as has.</p>
+								<h1 class="mb-10">Our fleet gallery</h1>
+								<p>With the exceptional fleet at our disposal, have a look at the classy buses we got for our esteemed customers.</p>
 							</div>
 						</div>
 					</div>							
@@ -508,7 +512,7 @@
 						<div class="active-recent-blog-carusel">
 							<div class="single-recent-blog-post item">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/b1.jpg" alt="">
+									<img class="img-fluid" src="assets/img/scania7.jpg" style="height:260px;" alt="">
 								</div>
 								<div class="details">
 									<div class="tags">
@@ -517,20 +521,20 @@
 												<a href="#">Travel</a>
 											</li>
 											<li>
-												<a href="#">Life Style</a>
+												<a href="#">Comfort</a>
 											</li>											
 										</ul>
 									</div>
-									<a href="#"><h4 class="title">Low Cost Advertising</h4></a>
+									<a href="#"><h4 class="title">Nairobi - Migori</h4></a>
 									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
+										To our esteemed customers for this route, we got you covered.
 									</p>
-									<h6 class="date">31st January,2018</h6>
+									<h6 class="date">Daily trips</h6>
 								</div>	
 							</div>
 							<div class="single-recent-blog-post item">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/b2.jpg" alt="">
+									<img class="img-fluid" src="assets/img/scania9.jpg" style="height:260px;" alt="">
 								</div>
 								<div class="details">
 									<div class="tags">
@@ -539,20 +543,20 @@
 												<a href="#">Travel</a>
 											</li>
 											<li>
-												<a href="#">Life Style</a>
+												<a href="#">Comfort</a>
 											</li>											
 										</ul>
 									</div>
-									<a href="#"><h4 class="title">Creative Outdoor Ads</h4></a>
+									<a href="#"><h4 class="title">Nairobi - Mombasa</h4></a>
 									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
+										To our esteemed customers for this route, we got you covered
 									</p>
-									<h6 class="date">31st January,2018</h6>
+									<h6 class="date">06st May,2019</h6>
 								</div>	
 							</div>
 							<div class="single-recent-blog-post item">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/b3.jpg" alt="">
+									<img class="img-fluid" src="assets/img/scania3.jpg" style="height:260px;" alt="">
 								</div>
 								<div class="details">
 									<div class="tags">
@@ -561,20 +565,20 @@
 												<a href="#">Travel</a>
 											</li>
 											<li>
-												<a href="#">Life Style</a>
+												<a href="#">Comfort</a>
 											</li>											
 										</ul>
 									</div>
-									<a href="#"><h4 class="title">It's Classified How To Utilize Free</h4></a>
+									<a href="#"><h4 class="title">Nairobi - Kisumu</h4></a>
 									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
+										To our esteemed customers for this route, we got you covered
 									</p>
-									<h6 class="date">31st January,2018</h6>
+									<h6 class="date">3rd May,2019</h6>
 								</div>	
 							</div>	
 							<div class="single-recent-blog-post item">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/b1.jpg" alt="">
+									<img class="img-fluid" src="assets/img/scania10.jpeg" style="height:260px;" alt="">
 								</div>
 								<div class="details">
 									<div class="tags">
@@ -583,20 +587,20 @@
 												<a href="#">Travel</a>
 											</li>
 											<li>
-												<a href="#">Life Style</a>
+												<a href="#">Comfort</a>
 											</li>											
 										</ul>
 									</div>
-									<a href="#"><h4 class="title">Low Cost Advertising</h4></a>
+									<a href="#"><h4 class="title">Mombasa - Nairobi</h4></a>
 									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
+										To our esteemed customers for this route, we got you covered
 									</p>
-									<h6 class="date">31st January,2018</h6>
+									<h6 class="date">4th May,2019</h6>
 								</div>	
 							</div>
 							<div class="single-recent-blog-post item">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/b2.jpg" alt="">
+									<img class="img-fluid" src="assets/img/scania5.jpg" style="height:260px;" alt="">
 								</div>
 								<div class="details">
 									<div class="tags">
@@ -605,20 +609,20 @@
 												<a href="#">Travel</a>
 											</li>
 											<li>
-												<a href="#">Life Style</a>
+												<a href="#">Comfort</a>
 											</li>											
 										</ul>
 									</div>
-									<a href="#"><h4 class="title">Creative Outdoor Ads</h4></a>
+									<a href="#"><h4 class="title">Nairobi - Kakamega</h4></a>
 									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
+									To our esteemed customers for this route, we got you covered
 									</p>
-									<h6 class="date">31st January,2018</h6>
+									<h6 class="date">30th April,2019</h6>
 								</div>	
 							</div>
 							<div class="single-recent-blog-post item">
 								<div class="thumb">
-									<img class="img-fluid" src="assets/img/b3.jpg" alt="">
+									<img class="img-fluid" src="assets/img/layout1.jpg" style="height:260px;" alt="">
 								</div>
 								<div class="details">
 									<div class="tags">
@@ -627,18 +631,105 @@
 												<a href="#">Travel</a>
 											</li>
 											<li>
-												<a href="#">Life Style</a>
+												<a href="#">Comfort</a>
 											</li>											
 										</ul>
 									</div>
-									<a href="#"><h4 class="title">It's Classified How To Utilize Free</h4></a>
+									<a href="#"><h4 class="title">How our interior looks</h4></a>
 									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
+										With our interactive seat selection map, choose your favorite seat to enjoy a superb ride
 									</p>
-									<h6 class="date">31st January,2018</h6>
+									<h6 class="date">Comfort is our priority</h6>
+								</div>	
+							</div>	
+							<div class="single-recent-blog-post item">
+								<div class="thumb">
+									<img class="img-fluid" src="assets/img/layout3.jpg" style="height:260px;" alt="">
+								</div>
+								<div class="details">
+									<div class="tags">
+										<ul>
+											<li>
+												<a href="#">Travel</a>
+											</li>
+											<li>
+												<a href="#">Comfort</a>
+											</li>											
+										</ul>
+									</div>
+									<a href="#"><h4 class="title">How our interior looks</h4></a>
+									<p>
+										With our interactive seat selection map, choose your favorite seat to enjoy a superb ride
+									</p>
+									<h6 class="date">Comfort is our priority</h6>
+								</div>	
+							</div>
+							<div class="single-recent-blog-post item">
+								<div class="thumb">
+									<img class="img-fluid" src="assets/img/scania6.JPG" style="height:260px;" alt="">
+								</div>
+								<div class="details">
+									<div class="tags">
+										<ul>
+											<li>
+												<a href="#">Travel</a>
+											</li>
+											<li>
+												<a href="#">Comfort</a>
+											</li>											
+										</ul>
+									</div>
+									<a href="#"><h4 class="title">Main Offices</h4></a>
+									<p>
+										With our interactive seat selection map, choose your favorite seat to enjoy a superb ride
+									</p>
+									<h6 class="date">Comfort is our priority</h6>
+								</div>	
+							</div>		
+							<div class="single-recent-blog-post item">
+								<div class="thumb">
+									<img class="img-fluid" src="assets/img/layout2.jpg" style="height:260px;" alt="">
+								</div>
+								<div class="details">
+									<div class="tags">
+										<ul>
+											<li>
+												<a href="#">Travel</a>
+											</li>
+											<li>
+												<a href="#">Comfort</a>
+											</li>											
+										</ul>
+									</div>
+									<a href="#"><h4 class="title">How our interior looks</h4></a>
+									<p>
+										With our interactive seat selection map, choose your favorite seat to enjoy a superb ride
+									</p>
+									<h6 class="date">Comfort is our priority</h6>
 								</div>	
 							</div>														
-
+							<div class="single-recent-blog-post item">
+								<div class="thumb">
+									<img class="img-fluid" src="assets/img/fleet4.jpg" style="height:260px;" alt="">
+								</div>
+								<div class="details">
+									<div class="tags">
+										<ul>
+											<li>
+												<a href="#">Travel</a>
+											</li>
+											<li>
+												<a href="#">Comfort</a>
+											</li>											
+										</ul>
+									</div>
+									<a href="#"><h4 class="title">Nairobi - Kitale</h4></a>
+									<p>
+									To our esteemed customers for this route, we got you covered
+									</p>
+									<h6 class="date">10th May,2019</h6>
+								</div>	
+							</div>
 						</div>
 					</div>
 				</div>	

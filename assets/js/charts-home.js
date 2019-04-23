@@ -10,7 +10,7 @@ $(document).ready(function () {
     // ------------------------------------------------------- //
     // Line Chart
     // ------------------------------------------------------ //
-    var LINECHART = $('#lineCahrt');
+    var LINECHART = $('#lineChart');
     var myLineChart = new Chart(LINECHART, {
         type: 'line',
         options: {
@@ -19,7 +19,7 @@ $(document).ready(function () {
             }
         },
         data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "August", "September", "November", "December"],
             datasets: [
                 {
                     label: "My First dataset",
@@ -41,7 +41,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 0,
-                    data: [50, 20, 60, 31, 52, 22, 40],
+                    data: [50, 20, 60, 31, 52, 22, 40, 49, 63, 53, 90],
                     spanGaps: false
                 },
                 {
@@ -64,42 +64,81 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [65, 59, 30, 81, 46, 55, 30],
+                    data: [65, 59, 30, 81, 46, 55, 30, 71, 64, 45, 23],
                     spanGaps: false
                 }
             ]
         }
     });
 
-
+    // ------------------------------------------------------- //
+    // Line Chart
+    // ------------------------------------------------------ //
+    var BARCHART = $('#barChart');
+    var myBarChart = new Chart(BARCHART, {
+        type: 'bar',
+        options: {
+            legend: {
+                display: false
+            }
+        },
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "August", "September", "November", "December"],
+            datasets: [
+                {
+                    label: "My First dataset",
+                    fill: true,
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(77, 193, 75, 0.4)",
+                    borderColor: brandPrimary,
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    borderWidth: 1,
+                    pointBorderColor: brandPrimary,
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: brandPrimary,
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 0,
+                    data: [50, 40, 60, 31, 52, 22, 40, 49, 63, 53, 90],
+                    spanGaps: false
+                }
+            ]
+        }
+    })
     // ------------------------------------------------------- //
     // Pie Chart
     // ------------------------------------------------------ //
-    var PIECHART = $('#pieChart');
-    var myPieChart = new Chart(PIECHART, {
-        type: 'doughnut',
-        data: {
-            labels: [
-                "First",
-                "Second",
-                "Third"
-            ],
-            datasets: [
-                {
-                    data: [300, 50, 100],
-                    borderWidth: [1, 1, 1],
-                    backgroundColor: [
-                        brandPrimary,
-                        "rgba(75,192,192,1)",
-                        "#FFCE56"
-                    ],
-                    hoverBackgroundColor: [
-                        brandPrimary,
-                        "rgba(75,192,192,1)",
-                        "#FFCE56"
-                    ]
-                }]
-        }
-    });
+    // var PIECHART = $('#pieChart');
+    // var myPieChart = new Chart(PIECHART, {
+    //     type: 'doughnut',
+    //     data: {
+    //         labels: [
+    //             "First",
+    //             "Second",
+    //             "Third"
+    //         ],
+    //         datasets: [
+    //             {
+    //                 data: [300, 50, 100],
+    //                 borderWidth: [1, 1, 1],
+    //                 backgroundColor: [
+    //                     brandPrimary,
+    //                     "rgba(75,192,192,1)",
+    //                     "#FFCE56"
+    //                 ],
+    //                 hoverBackgroundColor: [
+    //                     brandPrimary,
+    //                     "rgba(75,192,192,1)",
+    //                     "#FFCE56"
+    //                 ]
+    //             }]
+    //     }
+    // });
 
 });

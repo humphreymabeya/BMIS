@@ -58,7 +58,7 @@
 										<div class="col-lg-4 wow fadeInUp">
 											<div class="single-destinations">
 												<div class="thumb">
-													<img src="../assets/img/packages/scania1.jpg" alt="">
+													<img src="../assets/img/scania6.JPG" alt="">
 												</div>
 												<div class="details">
 													<h4>Bus Number: '.$result['busregno'].'</h4>
