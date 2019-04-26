@@ -11,7 +11,7 @@
 	$result = $a->fetch_assoc();
 
 	// fetch booked seats
-	$sqlSeats = $conn->query("SELECT GROUP_CONCAT(CONCAT('''', seat_xy, '''')) AS seatxy FROM reserves WHERE bid = '".$bid."'");
+	$sqlSeats = $conn->query("SELECT GROUP_CONCAT(CONCAT('''', seat_xy, '''')) AS seatxy FROM reserves WHERE bid = '".$bid."' AND status = 'Booked'");
 	$results = $sqlSeats->fetch_array(MYSQLI_ASSOC);
 	$res = $results['seatxy'];
 

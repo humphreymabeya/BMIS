@@ -25,7 +25,7 @@
 						<h1 class="text-white">
 							Ena Travel Company				
 						</h1>	
-						<p class="text-white link-nav"><a href="index.php">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="selectseat.php">Print Ticket</a></p>
+						<p class="text-white link-nav"><a href="index.php">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="printTicket.php">Print Ticket</a></p>
 					</div>	
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 		        <div class="row d-flex justify-content-center">
 		            <div class="menu-content pb-40 col-lg-8">
 		                <div class="title text-center">
-		                    <h1 class="mb-10">Tickets Section</h1> 
+		                    <h1 class="mb-10">Generate Ticket</h1> 
 		                    <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to.</p>
 							
 		                </div>

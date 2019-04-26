@@ -87,7 +87,7 @@
 									</form>							  	
 								</div>
 								<div class="tab-pane fade" id="cancel" role="tabpanel" aria-labelledby="cancel-tab">
-									<form class="form-wrap">
+									<form class="form-wrap" role="form" method="POST" action="cancelTicket.php">
 										<div class="form-row">
 											<div class="form-group col-12">
 												<input type="text" class="form-control" name="ticketId" placeholder="Ticket ID " onfocus="this.placeholder = ''" onblur="this.placeholder = 'TicketID '">									
@@ -96,7 +96,7 @@
 												<input type="text" class="form-control" name="mobileNo" placeholder="Mobile Number " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'">
 											</div>	
 											<div class="form-group col-12">
-												<button type="submit" name="save" class="btn btn-block btn-primary text-uppercase">Cancel Ticket</button>	
+												<button type="submit" name="cancel" class="btn btn-block btn-primary text-uppercase">Cancel Ticket</button>	
 											</div>
 										</div>											
 									</form>							  	
@@ -353,7 +353,7 @@
 		                <div class="menu-content pb-70 col-lg-8">
 		                    <div class="title text-center">
 		                        <h1 class="mb-10">Testimonial from our Clients</h1>
-		                        <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
+		                        <p>Making your travel enjoyable and with comfort is our priority </p>
 		                    </div>
 		                </div>
 		            </div>
@@ -365,9 +365,9 @@
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.		     
+		                                I enjoyed my travel with your Bus from Nairobi to Mombasa, all the services were above board.		     
 		                            </p>
-		                            <h4>Harriet Maxwell</h4>
+		                            <h4>Harriet Mwikali</h4>
 	                            	<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -383,9 +383,9 @@
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
+									I enjoyed my travel with your Bus from Nairobi to Mombasa, all the services were above board.
 		                            </p>
-		                            <h4>Carolyn Craig</h4>
+		                            <h4>Carolyn Macharia</h4>
 	                           		<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -401,9 +401,9 @@
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.		     
+									I enjoyed my travel with your Bus from Nairobi to Mombasa, all the services were above board.     
 		                            </p>
-		                            <h4>Harriet Maxwell</h4>
+		                            <h4>Maxwell</h4>
 	                            	<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -419,9 +419,9 @@
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
+									I enjoyed my travel with your Bus from Nairobi to Kisumu, all the services were above board.
 		                            </p>
-		                            <h4>Carolyn Craig</h4>
+		                            <h4>Craig Otieno</h4>
 	                           		<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -437,9 +437,9 @@
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.		     
+										I enjoyed my travel with your Bus from Nairobi to Mombasa, all the services were above board.
 		                            </p>
-		                            <h4>Harriet Maxwell</h4>
+		                            <h4>Bernard Kamau</h4>
 	                            	<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -455,9 +455,9 @@
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
+										I enjoyed my travel with your Bus from Nairobi to Mombasa, all the services were above board.
 		                            </p>
-		                            <h4>Carolyn Craig</h4>
+		                            <h4>Miriam Kerubo</h4>
 	                           		<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>

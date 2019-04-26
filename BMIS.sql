@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 23, 2019 at 10:52 AM
+-- Generation Time: Apr 23, 2019 at 03:50 PM
 -- Server version: 5.7.25-0ubuntu0.18.04.2
 -- PHP Version: 7.2.15-0ubuntu0.18.04.2
 
@@ -44,15 +44,15 @@ CREATE TABLE `bus` (
 --
 
 INSERT INTO `bus` (`id`, `route`, `busregno`, `bustype`, `capacity`, `available`, `traveldate`, `departure`, `arrival`, `delete_status`) VALUES
-(1, 3, 'KCR 111K', 'Business', 49, 41, '2019-04-22', '9:00 AM', '4:00 PM', '0'),
-(2, 4, 'KCR 119K', 'Executive', 49, 49, '2019-04-15', '9:00 AM', '4:00 PM', '0'),
-(3, 4, 'KCA 123B', 'Executive', 49, 49, '2019-04-15', '8:00 PM', '4:00 AM', '0'),
-(4, 3, 'KCA 123W', 'Executive', 49, 47, '2019-04-22', '9:00 AM', '4:00 PM', '0'),
-(5, 5, 'KCC 737M', 'Business', 49, 49, '2019-04-15', '9:00 AM', '4:00 AM', '0'),
-(6, 7, 'KCR 112K', 'Business', 49, 49, '2019-04-15', '9:00 AM', '6:00 PM', '0'),
-(7, 8, 'KCR 113K', 'Business', 49, 49, '2019-04-15', '10:00 PM', '5:00 AM', '0'),
-(8, 1, 'KCR 122A', 'Business', 49, 46, '2019-04-15', '9:00am', '7:00pm', '0'),
-(9, 3, 'KCT 508N', 'Business', 49, 49, '2019-04-22', '10: 00 PM', '4:00 AM', '0');
+(1, 3, 'KCR 111K', 'Business', 49, 41, '2019-04-23', '9:00 AM', '4:00 PM', '0'),
+(2, 4, 'KCR 119K', 'Executive', 49, 49, '2019-04-23', '9:00 AM', '4:00 PM', '0'),
+(3, 4, 'KCA 123B', 'Executive', 49, 49, '2019-04-23', '8:00 PM', '4:00 AM', '0'),
+(4, 3, 'KCA 123W', 'Executive', 49, 47, '2019-04-23', '9:00 AM', '4:00 PM', '0'),
+(5, 5, 'KCC 737M', 'Business', 49, 49, '2019-04-23', '9:00 AM', '4:00 AM', '0'),
+(6, 7, 'KCR 112K', 'Business', 49, 49, '2019-04-23', '9:00 AM', '6:00 PM', '0'),
+(7, 8, 'KCR 113K', 'Business', 49, 49, '2019-04-23', '10:00 PM', '5:00 AM', '0'),
+(8, 1, 'KCR 122A', 'Business', 49, 46, '2019-04-23', '9:00am', '7:00pm', '0'),
+(9, 3, 'KCT 508N', 'Business', 49, 49, '2019-04-23', '10: 00 PM', '4:00 AM', '0');
 
 -- --------------------------------------------------------
 
@@ -233,7 +233,7 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `created_at` datetime DEFAULT CURRENT_TIMESTAMP
+  `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

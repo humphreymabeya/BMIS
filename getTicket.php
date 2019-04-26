@@ -33,7 +33,7 @@
 	
 	if(isset($_REQUEST['act']) && @$_REQUEST['act']=="book")
 	{
-		$errormsg = "<div class='alert alert-success'> <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Success!</strong> Seat(s) selected successfully. Your Ticket Number is: []. <h6>Click on The Home Page, Print Ticket Tab, Insert the TicketID and Mobile Number To print Your Ticket. E-ticket notification sent to email and Mobile Number. Thank You, Welcome </h6><span><i class='fa fa-envelope'></i></span></div>";
+		$errormsg = "<div class='alert alert-success'> <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Success!</strong> Seat(s) selected successfully. <h6>Click on The Home Page, Print Ticket Tab, Insert the TicketID and Mobile Number To print Your Ticket. E-ticket notification sent to email and Mobile Number. Thank You, Welcome </h6><span><i class='fa fa-envelope'></i></span></div>";
 	}	
 ?>
 <!DOCTYPE html>
