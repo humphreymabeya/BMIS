@@ -1,13 +1,14 @@
 <?php
 	$action = $id = $tid = '';
 	include('database/config.php');
-	$fullname = $mobile = $idno = $email = $seat = $errormsg = $ticket = $bid = '';  
+	$fullname = $mobile = $idno = $email = $seat = $errormsg = $ticket = $bid = $fare = '';  
 	$tid = $bid = isset($_GET['id'])?mysqli_real_escape_string($conn, $_GET['id']):'';
 	$sq = $conn->query("SELECT * FROM reserves WHERE id = '".$tid."'");
 	$res = $sq->fetch_assoc();
 
 	if(isset($_POST['save'])){	
 		$bid = mysqli_real_escape_string($conn, $_POST['bid']);
+		$fare = mysqli_real_escape_string($conn, $_POST['fare']);
 		foreach($_POST['fullname'] as $index => $val){
 			$fullname = $val;
 			$mobile = mysqli_real_escape_string($conn, $_POST['mobile'][$index]);
@@ -16,7 +17,7 @@
 			$seat = mysqli_real_escape_string($conn, $_POST['seatnum'][$index]);
 			$seat_xy = mysqli_real_escape_string($conn, $_POST['seat_xy'][$index]);
 			// save into database
-			$sql = $conn->query("INSERT into reserves (bid, fullname, mobile, idno, email, seatnum, seat_xy) VALUES ('$bid','$fullname', '$mobile', '$idno','$email', '$seat', '$seat_xy')");
+			$sql = $conn->query("INSERT into reserves (bid, fullname, mobile, idno, email, seatnum, seat_xy, paid) VALUES ('$bid','$fullname', '$mobile', '$idno','$email', '$seat', '$seat_xy', '$fare')");
 			
 			$sqlTicket = $conn->query("SELECT GROUP_CONCAT(CONCAT('''',fullname,'''')) AS fullnames FROM reserves where fullname = '".$fullname."' ");
 			$results2 = $sqlTicket->fetch_array(MYSQLI_ASSOC);

@@ -15,14 +15,14 @@ $(document).ready(function () {
         type: 'line',
         options: {
             legend: {
-                display: false
+                display: true
             }
         },
         data: {
             labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "August", "September", "November", "December"],
             datasets: [
                 {
-                    label: "My First dataset",
+                    label: "2018",
                     fill: true,
                     lineTension: 0.3,
                     backgroundColor: "rgba(77, 193, 75, 0.4)",
@@ -45,7 +45,7 @@ $(document).ready(function () {
                     spanGaps: false
                 },
                 {
-                    label: "My First dataset",
+                    label: "2019",
                     fill: true,
                     lineTension: 0.3,
                     backgroundColor: "rgba(75,192,192,0.4)",
@@ -64,7 +64,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [65, 59, 30, 81, 46, 55, 30, 71, 64, 45, 23],
+                    data: [65, 59, 30, 81],
                     spanGaps: false
                 }
             ]
@@ -79,14 +79,14 @@ $(document).ready(function () {
         type: 'bar',
         options: {
             legend: {
-                display: false
+                display: true
             }
         },
         data: {
             labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "August", "September", "November", "December"],
             datasets: [
                 {
-                    label: "My First dataset",
+                    label: "2019",
                     fill: true,
                     lineTension: 0.3,
                     backgroundColor: "rgba(77, 193, 75, 0.4)",
@@ -105,7 +105,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 0,
-                    data: [50, 40, 60, 31, 52, 22, 40, 49, 63, 53, 90],
+                    data: [50000, 40000, 60000, 31000, 52000, 22000, 40000, 49000, 63000, 53000, 90000],
                     spanGaps: false
                 }
             ]

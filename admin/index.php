@@ -36,8 +36,13 @@
 						<div class="col-xl-3 col-md-4 col-6">
 							<div class="wrapper count-title d-flex">
 								<div class="icon"><i class="icon-user"></i></div>
-								<div class="name"><strong class="text-uppercase">Travellers</strong><span>Last 7 days</span>
-									<div class="count-number">400</div>
+								<div class="name"><strong class="text-uppercase">Travellers</strong><span>Last 6 Months</span>
+									<?php
+										$conn->select_db('BMIS');
+										$result = $conn->query("Select * from reserves where status='Booked'");
+                                        $num_rows = $result->num_rows;
+									?>
+									<div class="count-number"><?php echo $num_rows; ?> </div>
 								</div>
 							</div>
 						</div>
@@ -45,8 +50,13 @@
 						<div class="col-xl-3 col-md-4 col-6">
 							<div class="wrapper count-title d-flex">
 								<div class="icon"><i class="fa fa-bus"></i></div>
-								<div class="name"><strong class="text-uppercase">Buses</strong><span>Last 7 days</span>
-									<div class="count-number">342</div>
+								<div class="name"><strong class="text-uppercase">Buses</strong><span>Last 12 Months</span>
+									<?php
+										$conn->select_db('BMIS');
+										$result = $conn->query("Select * from bus where delete_status='0'");
+                                        $num_rows = $result->num_rows;
+									?>
+									<div class="count-number"> <?php echo $num_rows; ?> </div>
 								</div>
 							</div>
 						</div>
@@ -64,24 +74,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- Count item widget-->
-						<!-- <div class="col-xl-2 col-md-4 col-6">
-							<div class="wrapper count-title d-flex">
-								<div class="icon"><i class="icon-bill"></i></div>
-								<div class="name"><strong class="text-uppercase">Finances</strong><span>Last 7 days</span>
-									<div class="count-number">Kshs. 92, 000</div>
-								</div>
-							</div>
-						</div> -->
-						<!-- Count item widget-->
-						<!-- <div class="col-xl-2 col-md-4 col-6">
-							<div class="wrapper count-title d-flex">
-								<div class="icon"><i class="icon-list-1"></i></div>
-								<div class="name"><strong class="text-uppercase">Profits</strong><span>Last 7 days</span>
-									<div class="count-number">Kshs. 70, 000</div>
-								</div>
-							</div>
-						</div> -->
 					</div>
 				</div>
 			</section>
@@ -132,7 +124,14 @@
 							<!-- Income-->
 							<div class="card income text-center">
 								<div class="icon"><i class="icon-line-chart"></i></div>
-								<div class="number">Kshs. 126,418</div><strong class="text-primary">All Transactions</strong>
+								<?php
+                                    $sql = "SELECT sum(paid) as totalpaid FROM reserves";
+                                    $result = mysqli_query($conn, $sql);
+                                    while($row = mysqli_fetch_assoc($result)){
+                                        $totalpaid = $row['totalpaid'];      
+                                    }
+                                ?>
+								<div class="number">Kshs. <?php echo $totalpaid; ?></div><strong class="text-primary">All Transactions</strong>
 									<p>Payments made through bookings by customers.</p>
 								</div>
 						</div>

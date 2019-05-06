@@ -99,8 +99,9 @@
 											<ul id="selected-seats">
 											</ul>
 											<h3>Total Cost: <b>Ksh. <span id="total" style="color: red;">0</span></b></h3>
-											<input type="hidden" name="id" value="<?php echo $id;?>">
-											<input type="hidden" name="action" value="<?php echo $action;?>">
+											<input type="hidden" name="id" value="<?php echo $id;?>" />
+											<input type="hidden" name="action" value="<?php echo $action;?>" />
+											<input type="hidden" name="fare" value="<?php echo $result['price']; ?>" />
 											<button type="submit" name="save" class="checkout-button btn btn-danger">Book Now</button>
 										</form>
 									</div>
@@ -192,7 +193,7 @@
 												<div class="form-group row">\
 													<label class="col-form-label col-sm-2">Email:</label>\
 														<div class="col-sm-10">\
-															<input type="email" name="email[]" class="form-control" id="email" required/>\
+															<input type="email" name="email[]" class="form-control" id="email" />\
 															<div class="valid-feedback"></div>\
 															<div class="invalid-feedback">Please Provide a valid Email Address</div>\
 														</div>\
