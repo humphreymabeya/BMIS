@@ -93,12 +93,27 @@
 									<h4>Customer Details</h4>
 									<?php echo $errormsg; ?>
 									<div class="booking-details">
-										<form action="getTicket.php" class="needs-validation" role="form" method="POST" novalidate>
+										<form action="payment.php" class="needs-validation" role="form" method="POST" novalidate>
 											<input type="hidden" name="bid" value="<?php echo $bid;?>">
 											<h3> Selected Seats (<span id="counter">0</span>):</h3>
 											<ul id="selected-seats">
 											</ul>
-											<h3>Total Cost: <b>Ksh. <span id="total" style="color: red;">0</span></b></h3>
+											<h3>Total Cost: <b>Ksh. <span id="total" style="color: red;">0</span></b></h3><br>
+											<div class="form-group row">
+												<label class="col-form-label col-sm-4" for="payment">Payment Option:</label>
+												<div class="col-sm-8">
+													<select class="form-control" name="payment" id="payment">
+														<option value="mpesa">MPESA</option>
+														<option value="credit_card">Credit Card</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-form-label col-sm-4">Pay Contact:</label>
+												<div class="col-sm-8">
+													<input type="number" name="contact" class="form-control" placeholder="2547XXXXXXX" id="contact" required/>											
+												</div>
+											</div> 
 											<input type="hidden" name="id" value="<?php echo $id;?>" />
 											<input type="hidden" name="action" value="<?php echo $action;?>" />
 											<input type="hidden" name="fare" value="<?php echo $result['price']; ?>" />

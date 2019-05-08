@@ -125,7 +125,7 @@
 							<div class="card income text-center">
 								<div class="icon"><i class="icon-line-chart"></i></div>
 								<?php
-                                    $sql = "SELECT sum(paid) as totalpaid FROM reserves";
+                                    $sql = "SELECT sum(paid) as totalpaid FROM reserves where status='Booked'";
                                     $result = mysqli_query($conn, $sql);
                                     while($row = mysqli_fetch_assoc($result)){
                                         $totalpaid = $row['totalpaid'];      
