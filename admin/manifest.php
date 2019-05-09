@@ -245,7 +245,7 @@
                 }
             </script>
             <!-- modal class -->
-            <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal fade modalprinter printable" id="myModal" role="dialog">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -255,7 +255,7 @@
                         <div class="modal-body" id="formcontent">
                         </div>
                         <div class="modal-footer">
-                            <span class="float-left"><button type="button" class="btn btn-info float-left"><i class="fa fa-print"></i> Print</button></span>
+                            <span class="float-left"><button type="button" class="btn btn-info"><i class="fa fa-print" onclick="window.print()"></i> Print</button></span>
                             <span class="float-right"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></span>
                         </div>
                     </div>

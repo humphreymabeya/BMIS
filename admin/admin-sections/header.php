@@ -28,4 +28,4 @@
     <link rel="stylesheet" href="../../assets/css/jquery-ui-1.10.3.custom.min.css">
     <link rel="stylesheet" href="../../assets/css/datepicker.css">
     <link rel="stylesheet" href="../../assets/css/ui.css">
-    
+    <link rel="stylesheet" href="../../assets/css/modal-print.css">

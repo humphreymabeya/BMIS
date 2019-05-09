@@ -86,7 +86,7 @@ $(document).ready(function () {
             labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "August", "September", "November", "December"],
             datasets: [
                 {
-                    label: "2019",
+                    label: "2018",
                     fill: true,
                     lineTension: 0.3,
                     backgroundColor: "rgba(77, 193, 75, 0.4)",

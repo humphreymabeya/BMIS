@@ -5,11 +5,11 @@
     $send = 1;
     $amount = mysqli_real_escape_string($conn, $_POST['fare']);
     $mobile = mysqli_real_escape_string($conn, $_POST['contact']);
-    $back = mysqli_real_escape_string($conn, $_POST['back']);
+    // $back = mysqli_real_escape_string($conn, $_POST['back']);
     // initiate transaction
     if($send = 1){
-        require('mpesa/config/Constant.php');
-        require('mpesa/lib/MpesaAPI.php');
+        require_once('mpesa/config/Constant.php');
+        require_once('mpesa/lib/MpesaAPI.php');
         // mpesa credentials
         $PAYBILL_NO = "898998";
         $MERCHENTS_ID = $PAYBILL_NO;
@@ -53,7 +53,7 @@
 ?>
 <?php
 	$action = $id = $tid = '';
-	include('database/config.php');
+	// include('database/config.php');
 	$fullname = $mobile = $idno = $email = $seat = $errormsg = $ticket = $bid = $fare = '';  
 	$tid = $bid = isset($_GET['id'])?mysqli_real_escape_string($conn, $_GET['id']):'';
 	$sq = $conn->query("SELECT * FROM reserves WHERE id = '".$tid."'");
@@ -88,7 +88,7 @@
     function countdown() {
         var i = document.getElementById('counter');
         if (parseInt(i.innerHTML)<=0) {
-            location.href = '<?php echo "../".$back; ?>';
+            location.href = '<?php echo "../" ?>';
         }
         i.innerHTML = parseInt(i.innerHTML)-1;
     }

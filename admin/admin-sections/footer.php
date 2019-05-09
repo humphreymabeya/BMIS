@@ -28,3 +28,4 @@
     <!-- Main File-->
     <script src="../../assets/js/front.js"></script>
     <script src="../../assets/js/formValidation.js"></script>
+    <script src="../../assets/js/modal-print.js"></script>

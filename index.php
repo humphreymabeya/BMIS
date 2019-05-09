@@ -1,7 +1,15 @@
 <?php
     include('database/config.php');
-    $traveldate = $route = $action = $id = '';
+	$traveldate = $route = $action = $id = $mobile = '';
+	if(isset($_POST['retrieve'])){
+		$mobile = mysqli_real_escape_string($conn, $_POST['mobileNo']);
+		$sql = $conn->query("SELECT ticketID as ticketNo from reserves WHERE mobile = '$mobile'");
+		$result = $sql->fetch_array(MYSQLI_ASSOC);
+		$res = $result['ticketNo'];
+		echo '<script type="text/javascript">alert("Your Ticket ID is : '.$res.'.");</script>';
+	}
 ?>
+
 <!DOCTYPE html>
 	<html lang="en" class="no-js">
 		<head>
@@ -30,13 +38,16 @@
 						<div class="col-lg-4 col-md-6 banner-right" id="booking">
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
 							  <li class="nav-item">
-							    <a class="nav-link active" id="book-tab" data-toggle="tab" href="#book" role="tab" aria-controls="book" aria-selected="true">Book Now</a>
+							    <a class="nav-link active" id="book-tab" data-toggle="tab" href="#book" role="tab" aria-controls="book" aria-selected="true">Book</a>
 							  </li>
 							  <li class="nav-item">
 							    <a class="nav-link" id="print-tab" data-toggle="tab" href="#print" role="tab" aria-controls="print" aria-selected="false">Print</a>
 							  </li>
 							  <li class="nav-item">
 							    <a class="nav-link" id="cancel-tab" data-toggle="tab" href="#cancel" role="tab" aria-controls="cancel" aria-selected="false">Cancel</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" id="retrieve-tab" data-toggle="tab" href="#retrieve" role="tab" aria-controls="retrieve" aria-selected="false">Retrieve</a>
 							  </li>
 							</ul>
 							<div class="tab-content" id="myTabContent">
@@ -97,6 +108,18 @@
 											</div>	
 											<div class="form-group col-12">
 												<button type="submit" name="cancel" class="btn btn-block btn-primary text-uppercase">Cancel Ticket</button>	
+											</div>
+										</div>											
+									</form>							  	
+								</div>
+								<div class="tab-pane fade" id="retrieve" role="tabpanel" aria-labelledby="retrieve-tab">
+									<form class="form-wrap" role="form" method="POST" action="index.php">
+										<div class="form-row">
+											<div class="form-group col-12">	
+												<input type="text" class="form-control" name="mobileNo" placeholder="Mobile Number " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'">
+											</div>	
+											<div class="form-group col-12">
+												<button type="submit" name="retrieve" class="btn btn-block btn-primary text-uppercase">Get Ticket ID</button>	
 											</div>
 										</div>											
 									</form>							  	

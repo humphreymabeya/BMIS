@@ -42,7 +42,8 @@
                                 <th>Seat Number</th>
                                 <th>Name</th>
                                 <th>Mobile Number</th>
-				<th>TicketID</th>
+                                <th>TicketID</th>
+                                <th>Check In</th>
                             </tr>
                         </thead>
                         <tbody>';
@@ -52,7 +53,8 @@
                             <td>'.$pass['seatnum'].'</td>
                             <td>'.$pass['fullname'].'</td>
                             <td>'.$pass['mobile'].'</td>
-			                <td>'.$pass['ticketID'].'</td>
+                            <td>'.$pass['ticketID'].'</td>
+                            <td></td>
                             </tr>' ;
                         }
         
